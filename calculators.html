@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartBachao Calculators – बचत कैलकुलेटर | Free Savings Calculators India</title>
+<meta name="description" content="Free savings calculators for Indians. AC vs Cooler bill calculator, EV vs Petrol savings, Solar ROI, CNG vs Petrol, LPG vs Induction cost comparison. Hindi and English.">
+<link rel="canonical" href="https://smartbachao.com/calculators.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-05JN2S9F7J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-05JN2S9F7J');</script>
+<style>
+:root{--forest:#1a4731;--forest-mid:#2d6a4f;--forest-light:#40916c;--cream:#fefdf8;--warm:#f8f4e8;--gold:#d4a017;--gold-light:#f0c040;--ink:#1c1c1e;--muted:#6e6e73;--card:#ffffff;--border:rgba(26,71,49,0.12);--shadow:0 4px 24px rgba(26,71,49,0.08);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--ink);font-family:'Sora',sans-serif;}
+.hi{font-family:'Noto Sans Devanagari',sans-serif;}
+.lang-bar{background:var(--forest);padding:8px 5%;display:flex;justify-content:flex-end;gap:8px;align-items:center;position:sticky;top:0;z-index:200;}
+.lang-btn{padding:5px 16px;border-radius:20px;border:1.5px solid rgba(255,255,255,0.3);background:transparent;color:rgba(255,255,255,0.7);font-size:12px;font-family:'Sora',sans-serif;cursor:pointer;transition:all 0.2s;}
+.lang-btn.active{background:var(--gold);color:var(--forest);border-color:var(--gold);font-weight:600;}
+.lang-label{color:rgba(255,255,255,0.5);font-size:11px;margin-right:4px;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 5%;background:var(--cream);border-bottom:1px solid var(--border);}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:36px;height:36px;background:var(--forest);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.logo-text{font-size:1.4rem;font-weight:800;color:var(--forest);}.logo-text span{color:var(--gold);}
+.nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;font-weight:500;}
+.hero{background:linear-gradient(135deg,var(--forest) 0%,var(--forest-mid) 100%);padding:3rem 5%;color:white;text-align:center;}
+.hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:0.8rem;}
+.hero p{color:rgba(255,255,255,0.8);font-size:0.95rem;max-width:550px;margin:0 auto;line-height:1.8;}
+.main{max-width:1000px;margin:0 auto;padding:3rem 5%;}
+.calc-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem;}
+.calc-tab{padding:8px 18px;border-radius:20px;border:1.5px solid var(--border);background:transparent;font-family:'Sora',sans-serif;font-size:12px;font-weight:600;cursor:pointer;color:var(--muted);transition:all 0.2s;}
+.calc-tab.active{background:var(--forest);color:white;border-color:var(--forest);}
+.calc-panel{display:none;}.calc-panel.active{display:block;}
+.calc-card{background:var(--card);border-radius:20px;border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow);margin-bottom:2rem;}
+.calc-header{background:linear-gradient(135deg,var(--forest) 0%,var(--forest-mid) 100%);padding:2rem;color:white;}
+.calc-header h2{font-size:1.4rem;font-weight:800;margin-bottom:0.4rem;}
+.calc-header p{color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.6;}
+.calc-body{padding:2rem;}
+.input-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-bottom:1.5rem;}
+.input-group{display:flex;flex-direction:column;gap:6px;}
+.input-label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;}
+.input-field{padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:'Sora',sans-serif;font-size:0.95rem;color:var(--ink);background:var(--warm);outline:none;transition:border-color 0.2s;}
+.input-field:focus{border-color:var(--forest);}
+.input-note{font-size:11px;color:var(--muted);}
+.calc-btn{background:var(--forest);color:white;padding:14px 32px;border:none;border-radius:10px;font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;width:100%;}
+.calc-btn:hover{background:var(--forest-light);}
+.result-box{display:none;margin-top:1.5rem;background:var(--warm);border-radius:14px;padding:1.5rem;border:1px solid var(--border);}
+.result-box.show{display:block;}
+.result-title{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:1rem;}
+.result-item{background:var(--card);border-radius:10px;padding:1rem;text-align:center;border:1px solid var(--border);}
+.result-num{font-size:1.6rem;font-weight:800;color:var(--forest);}
+.result-label{font-size:11px;color:var(--muted);margin-top:4px;}
+.result-verdict{background:rgba(26,71,49,0.08);border-left:4px solid var(--forest);border-radius:0 10px 10px 0;padding:1rem 1.2rem;font-size:0.9rem;line-height:1.7;color:var(--ink);}
+.disclaimer{font-size:11px;color:var(--muted);margin-top:1rem;font-style:italic;}
+.all-calcs{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:2rem;}
+.calc-link{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-decoration:none;color:var(--ink);transition:all 0.2s;cursor:pointer;}
+.calc-link:hover{border-color:var(--forest);box-shadow:var(--shadow);}
+.calc-link-icon{font-size:2rem;margin-bottom:0.8rem;}
+.calc-link-title{font-size:0.95rem;font-weight:700;margin-bottom:4px;}
+.calc-link-desc{font-size:0.82rem;color:var(--muted);line-height:1.5;}
+footer{background:var(--forest);color:rgba(255,255,255,0.6);text-align:center;padding:2rem 5%;font-size:0.85rem;margin-top:3rem;}
+footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
+</style>
+</head>
+<body>
+
+<div class="lang-bar">
+  <span class="lang-label">भाषा:</span>
+  <button class="lang-btn active" onclick="setLang('hi')" id="btn-hi">हिंदी</button>
+  <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+</div>
+
+<nav>
+  <a href="index.html" class="logo"><div class="logo-icon">💡</div><span class="logo-text">Smart<span>Bachao</span></span></a>
+  <a href="index.html" class="nav-back">← <span class="hi">होम</span><span class="en" style="display:none">Home</span></a>
+</nav>
+
+<div class="hero">
+  <h1>🧮 <span class="hi">SmartBachao कैलकुलेटर</span><span class="en" style="display:none">SmartBachao Calculators</span></h1>
+  <p class="hi">अपनी असली बचत calculate करें — उदाहरण numbers से, आपकी situation के हिसाब से।</p>
+  <p class="en" style="display:none">Calculate your real savings — with example numbers, based on your own situation.</p>
+</div>
+
+<div class="main">
+
+  <div class="calc-tabs">
+    <button class="calc-tab active" onclick="showCalc('ac',this)">❄️ <span class="hi">AC vs कूलर</span><span class="en" style="display:none">AC vs Cooler</span></button>
+    <button class="calc-tab" onclick="showCalc('ev',this)">⚡ <span class="hi">EV vs पेट्रोल</span><span class="en" style="display:none">EV vs Petrol</span></button>
+    <button class="calc-tab" onclick="showCalc('lpg',this)">🍳 <span class="hi">LPG vs इंडक्शन</span><span class="en" style="display:none">LPG vs Induction</span></button>
+    <button class="calc-tab" onclick="showCalc('solar',this)">☀️ <span class="hi">Solar ROI</span><span class="en" style="display:none">Solar ROI</span></button>
+    <button class="calc-tab" onclick="showCalc('cng',this)">🔄 CNG vs Petrol</button>
+  </div>
+
+  <!-- AC VS COOLER -->
+  <div id="calc-ac" class="calc-panel active">
+    <div class="calc-card">
+      <div class="calc-header">
+        <h2>❄️ <span class="hi">AC vs Desert Cooler — बिजली बिल तुलना</span><span class="en" style="display:none">AC vs Desert Cooler — Electricity Bill Comparison</span></h2>
+        <p class="hi">अपना शहर का बिजली दर डालें और देखें — AC की जगह cooler चलाने से कितनी बचत होगी।</p>
+        <p class="en" style="display:none">Enter your electricity rate and see exactly how much you'd save switching from AC to a cooler.</p>
+      </div>
+      <div class="calc-body">
+        <div class="input-grid">
+          <div class="input-group">
+            <label class="input-label hi">बिजली दर (₹/unit)</label>
+            <label class="input-label en" style="display:none">Electricity rate (₹/unit)</label>
+            <input class="input-field" type="number" id="ac-rate" value="8" min="3" max="20">
+            <span class="input-note hi">उदाहरण: ₹6-10 (अपना बिल देखें)</span>
+            <span class="input-note en" style="display:none">Example: ₹6-10 (check your bill)</span>
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">रोज कितने घंटे?</label>
+            <label class="input-label en" style="display:none">Hours used per day</label>
+            <input class="input-field" type="number" id="ac-hours" value="8" min="1" max="24">
+            <span class="input-note hi">उदाहरण: रात को 8 घंटे</span>
+            <span class="input-note en" style="display:none">Example: 8 hours at night</span>
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">AC capacity (Ton)</label>
+            <label class="input-label en" style="display:none">AC capacity (Ton)</label>
+            <select class="input-field" id="ac-ton">
+              <option value="1.0">1.0 Ton</option>
+              <option value="1.5" selected>1.5 Ton</option>
+              <option value="2.0">2.0 Ton</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">महीने में दिन</label>
+            <label class="input-label en" style="display:none">Days per month</label>
+            <input class="input-field" type="number" id="ac-days" value="30" min="1" max="31">
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcAC()">
+          <span class="hi">Calculate करें →</span>
+          <span class="en" style="display:none">Calculate →</span>
+        </button>
+        <div class="result-box" id="ac-result">
+          <div class="result-title hi">आपका अनुमानित result</div>
+          <div class="result-title en" style="display:none">Your estimated result</div>
+          <div class="result-grid" id="ac-grid"></div>
+          <div class="result-verdict" id="ac-verdict"></div>
+          <p class="disclaimer hi">⚠️ ये उदाहरण के लिए अनुमानित numbers हैं। असल खपत आपके AC की star rating, room size और usage पर निर्भर करती है।</p>
+          <p class="disclaimer en" style="display:none">⚠️ These are estimated example numbers. Actual consumption depends on your AC's star rating, room size, and usage patterns.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EV VS PETROL -->
+  <div id="calc-ev" class="calc-panel">
+    <div class="calc-card">
+      <div class="calc-header">
+        <h2>⚡ <span class="hi">EV vs पेट्रोल स्कूटर — मासिक बचत</span><span class="en" style="display:none">EV vs Petrol Scooter — Monthly Savings</span></h2>
+        <p class="hi">अपनी daily distance और fuel rate डालें — देखें EV से महीने में कितनी बचत होगी।</p>
+        <p class="en" style="display:none">Enter your daily distance and fuel rate — see how much you'd save monthly with an EV.</p>
+      </div>
+      <div class="calc-body">
+        <div class="input-grid">
+          <div class="input-group">
+            <label class="input-label hi">रोज की दूरी (km)</label>
+            <label class="input-label en" style="display:none">Daily distance (km)</label>
+            <input class="input-field" type="number" id="ev-dist" value="20" min="1" max="150">
+            <span class="input-note hi">उदाहरण: office आना-जाना 20 km</span>
+            <span class="input-note en" style="display:none">Example: 20 km daily commute</span>
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">पेट्रोल दर (₹/litre, उदाहरण)</label>
+            <label class="input-label en" style="display:none">Petrol rate (₹/litre, example)</label>
+            <input class="input-field" type="number" id="ev-petrol" value="100" min="50" max="200">
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">बिजली दर (₹/unit, उदाहरण)</label>
+            <label class="input-label en" style="display:none">Electricity rate (₹/unit, example)</label>
+            <input class="input-field" type="number" id="ev-elec" value="8" min="3" max="20">
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">पेट्रोल स्कूटर mileage (km/litre)</label>
+            <label class="input-label en" style="display:none">Petrol scooter mileage (km/litre)</label>
+            <input class="input-field" type="number" id="ev-mileage" value="45" min="20" max="80">
+            <span class="input-note hi">उदाहरण: Activa ~45 km/litre</span>
+            <span class="input-note en" style="display:none">Example: Activa ~45 km/litre</span>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcEV()">
+          <span class="hi">Calculate करें →</span>
+          <span class="en" style="display:none">Calculate →</span>
+        </button>
+        <div class="result-box" id="ev-result">
+          <div class="result-title hi">आपका अनुमानित result</div>
+          <div class="result-title en" style="display:none">Your estimated result</div>
+          <div class="result-grid" id="ev-grid"></div>
+          <div class="result-verdict" id="ev-verdict"></div>
+          <p class="disclaimer hi">⚠️ EV consumption ~3 units/100km example मान कर calculate किया गया है। Actual consumption EV model पर निर्भर करती है।</p>
+          <p class="disclaimer en" style="display:none">⚠️ Calculated using ~3 units/100km as an example EV consumption. Actual varies by EV model.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LPG VS INDUCTION -->
+  <div id="calc-lpg" class="calc-panel">
+    <div class="calc-card">
+      <div class="calc-header">
+        <h2>🍳 <span class="hi">LPG vs इंडक्शन — खाना पकाने का खर्च</span><span class="en" style="display:none">LPG vs Induction — Monthly Cooking Cost</span></h2>
+        <p class="hi">जब LPG महंगी हो जाए — इंडक्शन switch करने पर कितनी बचत होगी?</p>
+        <p class="en" style="display:none">When LPG gets expensive — how much would you save switching to induction?</p>
+      </div>
+      <div class="calc-body">
+        <div class="input-grid">
+          <div class="input-group">
+            <label class="input-label hi">LPG cylinder कीमत (₹, उदाहरण)</label>
+            <label class="input-label en" style="display:none">LPG cylinder price (₹, example)</label>
+            <input class="input-field" type="number" id="lpg-price" value="850" min="500" max="1500">
+            <span class="input-note hi">उदाहरण के लिए एक कीमत डालें</span>
+            <span class="input-note en" style="display:none">Enter an example price</span>
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">महीने में cylinders</label>
+            <label class="input-label en" style="display:none">Cylinders per month</label>
+            <select class="input-field" id="lpg-cyl">
+              <option value="0.5">0.5 (हर 2 महीने में 1)</option>
+              <option value="1" selected>1 (हर महीने)</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">बिजली दर (₹/unit)</label>
+            <label class="input-label en" style="display:none">Electricity rate (₹/unit)</label>
+            <input class="input-field" type="number" id="lpg-elec" value="8" min="3" max="20">
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">रोज cooking (घंटे)</label>
+            <label class="input-label en" style="display:none">Daily cooking (hours)</label>
+            <input class="input-field" type="number" id="lpg-hours" value="1.5" min="0.5" max="5" step="0.5">
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcLPG()">
+          <span class="hi">Calculate करें →</span>
+          <span class="en" style="display:none">Calculate →</span>
+        </button>
+        <div class="result-box" id="lpg-result">
+          <div class="result-title hi">आपका अनुमानित result</div>
+          <div class="result-title en" style="display:none">Your estimated result</div>
+          <div class="result-grid" id="lpg-grid"></div>
+          <div class="result-verdict" id="lpg-verdict"></div>
+          <p class="disclaimer hi">⚠️ Induction ~1.2 kW average consumption मान कर calculate किया गया है। Actual cooking time और usage पर निर्भर करता है।</p>
+          <p class="disclaimer en" style="display:none">⚠️ Calculated using ~1.2 kW average induction consumption. Actual depends on cooking time and usage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOLAR ROI -->
+  <div id="calc-solar" class="calc-panel">
+    <div class="calc-card">
+      <div class="calc-header">
+        <h2>☀️ <span class="hi">Solar Panel ROI — कितने साल में पैसे वापस?</span><span class="en" style="display:none">Solar Panel ROI — How Many Years to Payback?</span></h2>
+        <p class="hi">Solar panel लगाने की investment कितने समय में recover होगी?</p>
+        <p class="en" style="display:none">How long will it take to recover your solar panel investment?</p>
+      </div>
+      <div class="calc-body">
+        <div class="input-grid">
+          <div class="input-group">
+            <label class="input-label hi">System size (KW)</label>
+            <label class="input-label en" style="display:none">System size (KW)</label>
+            <select class="input-field" id="sol-kw">
+              <option value="1">1 KW</option>
+              <option value="2">2 KW</option>
+              <option value="3" selected>3 KW</option>
+              <option value="5">5 KW</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">Installation cost (₹, उदाहरण)</label>
+            <label class="input-label en" style="display:none">Installation cost (₹, example)</label>
+            <input class="input-field" type="number" id="sol-cost" value="90000" min="30000" max="500000" step="5000">
+            <span class="input-note hi">Subsidy के बाद का खर्च डालें</span>
+            <span class="input-note en" style="display:none">Enter cost after subsidy</span>
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">बिजली दर (₹/unit)</label>
+            <label class="input-label en" style="display:none">Electricity rate (₹/unit)</label>
+            <input class="input-field" type="number" id="sol-rate" value="8" min="3" max="20">
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">सूरज के घंटे/दिन</label>
+            <label class="input-label en" style="display:none">Sunlight hours/day</label>
+            <input class="input-field" type="number" id="sol-sun" value="5" min="3" max="8">
+            <span class="input-note hi">North India: ~5-6 घंटे</span>
+            <span class="input-note en" style="display:none">North India: ~5-6 hours</span>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcSolar()">
+          <span class="hi">Calculate करें →</span>
+          <span class="en" style="display:none">Calculate →</span>
+        </button>
+        <div class="result-box" id="sol-result">
+          <div class="result-title hi">आपका अनुमानित result</div>
+          <div class="result-title en" style="display:none">Your estimated result</div>
+          <div class="result-grid" id="sol-grid"></div>
+          <div class="result-verdict" id="sol-verdict"></div>
+          <p class="disclaimer hi">⚠️ यह estimate है। Actual generation weather, panel efficiency और local conditions पर निर्भर करती है।</p>
+          <p class="disclaimer en" style="display:none">⚠️ This is an estimate. Actual generation depends on weather, panel efficiency, and local conditions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CNG VS PETROL -->
+  <div id="calc-cng" class="calc-panel">
+    <div class="calc-card">
+      <div class="calc-header">
+        <h2>🔄 <span class="hi">CNG vs पेट्रोल — CNG Conversion Worth It?</span><span class="en" style="display:none">CNG vs Petrol — Is CNG Conversion Worth It?</span></h2>
+        <p class="hi">CNG kit की लागत कितने समय में recover होगी — आपकी driving के हिसाब से।</p>
+        <p class="en" style="display:none">How long will it take to recover your CNG kit cost — based on your driving.</p>
+      </div>
+      <div class="calc-body">
+        <div class="input-grid">
+          <div class="input-group">
+            <label class="input-label hi">रोज की दूरी (km)</label>
+            <label class="input-label en" style="display:none">Daily distance (km)</label>
+            <input class="input-field" type="number" id="cng-dist" value="30" min="5" max="200">
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">पेट्रोल दर (₹/litre, उदाहरण)</label>
+            <label class="input-label en" style="display:none">Petrol rate (₹/litre, example)</label>
+            <input class="input-field" type="number" id="cng-petrol" value="100" min="50" max="200">
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">CNG दर (₹/kg, उदाहरण)</label>
+            <label class="input-label en" style="display:none">CNG rate (₹/kg, example)</label>
+            <input class="input-field" type="number" id="cng-rate" value="75" min="40" max="150">
+            <span class="input-note hi">अपने शहर की CNG rate डालें</span>
+            <span class="input-note en" style="display:none">Enter your city's CNG rate</span>
+          </div>
+          <div class="input-group">
+            <label class="input-label hi">CNG Kit लागत (₹, उदाहरण)</label>
+            <label class="input-label en" style="display:none">CNG Kit cost (₹, example)</label>
+            <input class="input-field" type="number" id="cng-kit" value="15000" min="8000" max="25000" step="1000">
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcCNG()">
+          <span class="hi">Calculate करें →</span>
+          <span class="en" style="display:none">Calculate →</span>
+        </button>
+        <div class="result-box" id="cng-result">
+          <div class="result-title hi">आपका अनुमानित result</div>
+          <div class="result-title en" style="display:none">Your estimated result</div>
+          <div class="result-grid" id="cng-grid"></div>
+          <div class="result-verdict" id="cng-verdict"></div>
+          <p class="disclaimer hi">⚠️ Petrol mileage 15 km/litre और CNG mileage 18 km/kg example मान कर calculate किया। Actual vehicle पर निर्भर।</p>
+          <p class="disclaimer en" style="display:none">⚠️ Calculated using 15 km/litre petrol and 18 km/kg CNG as examples. Actual depends on vehicle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALL CALCULATORS QUICK LINKS -->
+  <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:1rem;" class="hi">और SmartBachao Guides</h2>
+  <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:1rem;" class="en" style="display:none">More SmartBachao Guides</h2>
+  <div class="all-calcs">
+    <a href="bijli-bill-kam-kare.html" class="calc-link"><div class="calc-link-icon">💡</div><div class="calc-link-title hi">बिजली बिल गाइड</div><div class="calc-link-title en" style="display:none">Electricity Bill Guide</div><div class="calc-link-desc hi">10 असली तरीके बिल कम करने के</div><div class="calc-link-desc en" style="display:none">10 real ways to cut your bill</div></a>
+    <a href="png-connection-guide.html" class="calc-link"><div class="calc-link-icon">🔗</div><div class="calc-link-title">PNG Connection Guide</div><div class="calc-link-desc hi">LPG की जगह PNG कैसे लें</div><div class="calc-link-desc en" style="display:none">How to switch from LPG to PNG</div></a>
+    <a href="pm-surya-ghar-guide.html" class="calc-link"><div class="calc-link-icon">☀️</div><div class="calc-link-title">PM Surya Ghar</div><div class="calc-link-desc hi">60% subsidy पर solar कैसे लें</div><div class="calc-link-desc en" style="display:none">Get solar at 60% subsidy</div></a>
+    <a href="cycle-buying-guide-india.html" class="calc-link"><div class="calc-link-icon">🚲</div><div class="calc-link-title hi">साइकिल गाइड</div><div class="calc-link-title en" style="display:none">Cycle Buying Guide</div><div class="calc-link-desc hi">कौन सी साइकिल लें</div><div class="calc-link-desc en" style="display:none">Which cycle to buy</div></a>
+  </div>
+
+</div>
+
+<footer>
+  <p><a href="index.html">SmartBachao</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="contact.html">Contact</a></p>
+  <p style="margin-top:8px;">© 2026 SmartBachao.com</p>
+</footer>
+
+<script>
+// Language
+function detectLang(){const s=localStorage.getItem('sb-lang');if(s)return s;const b=navigator.language||'hi';return b.startsWith('hi')?'hi':'en';}
+function setLang(lang){localStorage.setItem('sb-lang',lang);document.documentElement.lang=lang;document.querySelectorAll('.hi').forEach(el=>el.style.display=lang==='hi'?'':'none');document.querySelectorAll('.en').forEach(el=>el.style.display=lang==='en'?'':'none');document.getElementById('btn-hi').classList.toggle('active',lang==='hi');document.getElementById('btn-en').classList.toggle('active',lang==='en');}
+document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
+
+// Tabs
+function showCalc(id,btn){
+  document.querySelectorAll('.calc-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.calc-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('calc-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// AC CALCULATOR
+function calcAC(){
+  const rate=parseFloat(document.getElementById('ac-rate').value)||8;
+  const hours=parseFloat(document.getElementById('ac-hours').value)||8;
+  const ton=parseFloat(document.getElementById('ac-ton').value)||1.5;
+  const days=parseFloat(document.getElementById('ac-days').value)||30;
+  const acKW=ton*0.85; // approx power consumption
+  const coolerKW=0.2;
+  const acCost=acKW*hours*days*rate;
+  const coolerCost=coolerKW*hours*days*rate;
+  const saving=acCost-coolerCost;
+  const lang=localStorage.getItem('sb-lang')||'hi';
+  document.getElementById('ac-grid').innerHTML=`
+    <div class="result-item"><div class="result-num">₹${Math.round(acCost)}</div><div class="result-label">${lang==='hi'?'AC मासिक खर्च (उदाहरण)':'AC monthly cost (example)'}</div></div>
+    <div class="result-item"><div class="result-num">₹${Math.round(coolerCost)}</div><div class="result-label">${lang==='hi'?'Cooler मासिक खर्च (उदाहरण)':'Cooler monthly cost (example)'}</div></div>
+    <div class="result-item"><div class="result-num" style="color:#d4a017">₹${Math.round(saving)}</div><div class="result-label">${lang==='hi'?'संभावित मासिक बचत':'Potential monthly saving'}</div></div>
+    <div class="result-item"><div class="result-num">₹${Math.round(saving*12)}</div><div class="result-label">${lang==='hi'?'सालाना बचत (उदाहरण)':'Annual saving (example)'}</div></div>`;
+  document.getElementById('ac-verdict').innerHTML=lang==='hi'
+    ?`Cooler use करने पर उदाहरण के तौर पर आप <strong>₹${Math.round(saving)}/month</strong> और साल में <strong>₹${Math.round(saving*12)}</strong> तक बचा सकते हैं। एक अच्छा cooler <strong>₹5,000-12,000</strong> में आता है — यानी कुछ ही महीनों में cost recover हो सकती है।`
+    :`Switching to a cooler could save you approximately <strong>₹${Math.round(saving)}/month</strong> and <strong>₹${Math.round(saving*12)}/year</strong> in these example conditions. A good cooler costs ₹5,000-12,000 — meaning it could pay for itself in just a few months.`;
+  document.getElementById('ac-result').classList.add('show');
+}
+
+// EV CALCULATOR
+function calcEV(){
+  const dist=parseFloat(document.getElementById('ev-dist').value)||20;
+  const petrol=parseFloat(document.getElementById('ev-petrol').value)||100;
+  const elec=parseFloat(document.getElementById('ev-elec').value)||8;
+  const mileage=parseFloat(document.getElementById('ev-mileage').value)||45;
+  const days=30;
+  const evUnitsper100=3;
+  const petrolCost=(dist/mileage)*petrol*days;
+  const evCost=(dist/100)*evUnitsper100*elec*days;
+  const saving=petrolCost-evCost;
+  const paybackMonths=saving>0?Math.ceil(80000/saving):999;
+  const lang=localStorage.getItem('sb-lang')||'hi';
+  document.getElementById('ev-grid').innerHTML=`
+    <div class="result-item"><div class="result-num">₹${Math.round(petrolCost)}</div><div class="result-label">${lang==='hi'?'पेट्रोल खर्च/month':'Petrol cost/month'}</div></div>
+    <div class="result-item"><div class="result-num">₹${Math.round(evCost)}</div><div class="result-label">${lang==='hi'?'EV charging खर्च/month':'EV charging/month'}</div></div>
+    <div class="result-item"><div class="result-num" style="color:#d4a017">₹${Math.round(saving)}</div><div class="result-label">${lang==='hi'?'मासिक बचत (उदाहरण)':'Monthly saving (example)'}</div></div>
+    <div class="result-item"><div class="result-num">${paybackMonths<100?paybackMonths+' mo':'24+ mo'}</div><div class="result-label">${lang==='hi'?'Payback period (उदाहरण)':'Payback period (example)'}</div></div>`;
+  document.getElementById('ev-verdict').innerHTML=saving>0
+    ?(lang==='hi'?`इन example numbers से EV लेने पर <strong>₹${Math.round(saving)}/month</strong> की बचत हो सकती है। साल में <strong>₹${Math.round(saving*12)}</strong>। अगर आप 3+ साल EV रखते हैं तो यह financially smart हो सकता है।`
+    :`With these example numbers, an EV could save you <strong>₹${Math.round(saving)}/month</strong> — <strong>₹${Math.round(saving*12)}/year</strong>. If you keep the EV for 3+ years, it could be financially smart.`)
+    :(lang==='hi'?'इन numbers से EV savings कम हैं। कम daily distance पर EV उतना beneficial नहीं होता।':'With these numbers, EV savings are limited. At low daily distances, EV may not be as beneficial.');
+  document.getElementById('ev-result').classList.add('show');
+}
+
+// LPG CALCULATOR
+function calcLPG(){
+  const lpgPrice=parseFloat(document.getElementById('lpg-price').value)||850;
+  const cyls=parseFloat(document.getElementById('lpg-cyl').value)||1;
+  const elec=parseFloat(document.getElementById('lpg-elec').value)||8;
+  const hours=parseFloat(document.getElementById('lpg-hours').value)||1.5;
+  const lpgCost=lpgPrice*cyls;
+  const inductionKW=1.2;
+  const inductionCost=inductionKW*hours*30*elec;
+  const saving=lpgCost-inductionCost;
+  const lang=localStorage.getItem('sb-lang')||'hi';
+  document.getElementById('lpg-grid').innerHTML=`
+    <div class="result-item"><div class="result-num">₹${Math.round(lpgCost)}</div><div class="result-label">${lang==='hi'?'LPG मासिक खर्च (उदाहरण)':'LPG monthly cost (example)'}</div></div>
+    <div class="result-item"><div class="result-num">₹${Math.round(inductionCost)}</div><div class="result-label">${lang==='hi'?'Induction मासिक खर्च':'Induction monthly cost'}</div></div>
+    <div class="result-item"><div class="result-num" style="color:#d4a017">₹${Math.round(Math.abs(saving))}</div><div class="result-label">${lang==='hi'?saving>0?'मासिक बचत (उदाहरण)':'Extra खर्च':saving>0?'Monthly saving (example)':'Extra cost'}</div></div>
+    <div class="result-item"><div class="result-num">₹${Math.round(Math.abs(saving)*12)}</div><div class="result-label">${lang==='hi'?'सालाना अंतर':'Annual difference'}</div></div>`;
+  document.getElementById('lpg-verdict').innerHTML=saving>0
+    ?(lang==='hi'?`इन example numbers से Induction LPG से सस्ता पड़ता है — <strong>₹${Math.round(saving)}/month</strong> की बचत। एक अच्छा induction cooktop <strong>₹2,000-4,000</strong> में आता है — कुछ ही महीनों में cost recover।`
+    :`With these example numbers, induction is cheaper than LPG — saving <strong>₹${Math.round(saving)}/month</strong>. A good induction cooktop costs ₹2,000-4,000 — payback in just a few months.`)
+    :(lang==='hi'?`इन numbers से LPG सस्ती है। जब LPG की कीमत और बढ़े तो Induction switch करना consider करें।`
+    :`With these numbers, LPG is cheaper. Consider switching to induction when LPG prices rise further.`);
+  document.getElementById('lpg-result').classList.add('show');
+}
+
+// SOLAR CALCULATOR
+function calcSolar(){
+  const kw=parseFloat(document.getElementById('sol-kw').value)||3;
+  const cost=parseFloat(document.getElementById('sol-cost').value)||90000;
+  const rate=parseFloat(document.getElementById('sol-rate').value)||8;
+  const sun=parseFloat(document.getElementById('sol-sun').value)||5;
+  const monthlyUnits=kw*sun*30*0.8; // 80% efficiency
+  const monthlySaving=monthlyUnits*rate;
+  const paybackYears=(cost/monthlySaving/12).toFixed(1);
+  const lang=localStorage.getItem('sb-lang')||'hi';
+  document.getElementById('sol-grid').innerHTML=`
+    <div class="result-item"><div class="result-num">${Math.round(monthlyUnits)}</div><div class="result-label">${lang==='hi'?'Units/month (उदाहरण)':'Units/month (example)'}</div></div>
+    <div class="result-item"><div class="result-num">₹${Math.round(monthlySaving)}</div><div class="result-label">${lang==='hi'?'मासिक बचत (उदाहरण)':'Monthly saving (example)'}</div></div>
+    <div class="result-item"><div class="result-num">₹${Math.round(monthlySaving*12)}</div><div class="result-label">${lang==='hi'?'सालाना बचत':'Annual saving'}</div></div>
+    <div class="result-item"><div class="result-num" style="color:#d4a017">${paybackYears} yrs</div><div class="result-label">${lang==='hi'?'Payback Period (उदाहरण)':'Payback Period (example)'}</div></div>`;
+  document.getElementById('sol-verdict').innerHTML=lang==='hi'
+    ?`इन example numbers से <strong>${kw} KW solar system</strong> लगभग <strong>${paybackYears} साल</strong> में अपनी cost recover कर लेगा। उसके बाद 20+ साल तक लगभग मुफ्त बिजली। PM Surya Ghar subsidy मिले तो payback period और कम हो सकता है।`
+    :`With these example numbers, a <strong>${kw} KW solar system</strong> would pay for itself in approximately <strong>${paybackYears} years</strong>. After that, ~free electricity for 20+ years. With PM Surya Ghar subsidy, payback could be even shorter.`;
+  document.getElementById('sol-result').classList.add('show');
+}
+
+// CNG CALCULATOR
+function calcCNG(){
+  const dist=parseFloat(document.getElementById('cng-dist').value)||30;
+  const petrol=parseFloat(document.getElementById('cng-petrol').value)||100;
+  const cngRate=parseFloat(document.getElementById('cng-rate').value)||75;
+  const kit=parseFloat(document.getElementById('cng-kit').value)||15000;
+  const days=30;
+  const petrolMileage=15;
+  const cngMileage=18;
+  const petrolCost=(dist/petrolMileage)*petrol*days;
+  const cngCost=(dist/cngMileage)*cngRate*days;
+  const monthlySaving=petrolCost-cngCost;
+  const paybackMonths=monthlySaving>0?Math.ceil(kit/monthlySaving):999;
+  const lang=localStorage.getItem('sb-lang')||'hi';
+  document.getElementById('cng-grid').innerHTML=`
+    <div class="result-item"><div class="result-num">₹${Math.round(petrolCost)}</div><div class="result-label">${lang==='hi'?'पेट्रोल खर्च/month':'Petrol cost/month'}</div></div>
+    <div class="result-item"><div class="result-num">₹${Math.round(cngCost)}</div><div class="result-label">${lang==='hi'?'CNG खर्च/month':'CNG cost/month'}</div></div>
+    <div class="result-item"><div class="result-num" style="color:#d4a017">₹${Math.round(monthlySaving)}</div><div class="result-label">${lang==='hi'?'मासिक बचत (उदाहरण)':'Monthly saving (example)'}</div></div>
+    <div class="result-item"><div class="result-num">${paybackMonths<100?paybackMonths+' mo':'24+ mo'}</div><div class="result-label">${lang==='hi'?'Kit payback (उदाहरण)':'Kit payback (example)'}</div></div>`;
+  document.getElementById('cng-verdict').innerHTML=monthlySaving>0
+    ?(lang==='hi'?`इन example numbers से CNG conversion <strong>₹${Math.round(monthlySaving)}/month</strong> बचाएगा। Kit की ₹${kit} लागत लगभग <strong>${paybackMonths} महीनों</strong> में recover होगी। अगर आप लंबे समय तक गाड़ी रखते हैं तो यह smart investment हो सकती है।`
+    :`With these example numbers, CNG saves <strong>₹${Math.round(monthlySaving)}/month</strong>. The ₹${kit} kit cost recovers in approximately <strong>${paybackMonths} months</strong>. If you plan to keep the vehicle long-term, this could be a smart investment.`)
+    :(lang==='hi'?'इन numbers से CNG savings नहीं हैं। CNG rate और पेट्रोल rate का अंतर ज्यादा होने पर ही यह beneficial होता है।'
+    :'With these numbers, CNG doesn\'t save money. CNG conversion is only beneficial when the price gap between petrol and CNG is significant.');
+  document.getElementById('cng-result').classList.add('show');
+}
+</script>
+</body>
+</html>

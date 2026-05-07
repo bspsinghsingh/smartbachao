@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartBachao – भारत की असली बचत गाइड | India's Smart Savings Guide</title>
+<meta name="description" content="SmartBachao: LPG crisis se lekar bijli bill tak, cycle kharidne se lekar ghar mein sabzi ugane tak — har samasyaa ka smart solution. Hindi aur English mein.">
+<meta name="keywords" content="LPG alternative india, induction cooktop, bijli bill kaise kam kare, PNG connection, PM Surya Ghar, cycle price india, mehngai solution">
+<link rel="canonical" href="https://smartbachao.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-05JN2S9F7J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-05JN2S9F7J');</script>
+<style>
+:root {
+  --forest: #1a4731;
+  --forest-mid: #2d6a4f;
+  --forest-light: #40916c;
+  --sage: #74c69d;
+  --mint: #b7e4c7;
+  --cream: #fefdf8;
+  --warm: #f8f4e8;
+  --gold: #d4a017;
+  --gold-light: #f0c040;
+  --ink: #1c1c1e;
+  --ink-mid: #3a3a3c;
+  --muted: #6e6e73;
+  --card: #ffffff;
+  --border: rgba(26,71,49,0.12);
+  --shadow: 0 4px 24px rgba(26,71,49,0.08);
+  --shadow-lg: 0 12px 48px rgba(26,71,49,0.14);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body { background:var(--cream); color:var(--ink); font-family:'Sora',sans-serif; overflow-x:hidden; }
+.hi { font-family:'Noto Sans Devanagari',sans-serif; }
+
+/* LANGUAGE SWITCHER */
+.lang-bar { background:var(--forest); padding:8px 5%; display:flex; justify-content:flex-end; align-items:center; gap:8px; position:sticky; top:0; z-index:200; }
+.lang-btn { padding:5px 16px; border-radius:20px; border:1.5px solid rgba(255,255,255,0.3); background:transparent; color:rgba(255,255,255,0.7); font-size:12px; font-family:'Sora',sans-serif; cursor:pointer; transition:all 0.2s; }
+.lang-btn.active { background:var(--gold); color:var(--forest); border-color:var(--gold); font-weight:600; }
+.lang-label { color:rgba(255,255,255,0.5); font-size:11px; margin-right:4px; }
+
+/* NAV */
+nav { display:flex; justify-content:space-between; align-items:center; padding:1rem 5%; background:var(--cream); border-bottom:1px solid var(--border); }
+.logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.logo-icon { width:36px; height:36px; background:var(--forest); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; }
+.logo-text { font-size:1.4rem; font-weight:800; color:var(--forest); letter-spacing:-0.5px; }
+.logo-text span { color:var(--gold); }
+.nav-links { display:flex; gap:1.5rem; list-style:none; }
+.nav-links a { text-decoration:none; color:var(--muted); font-size:0.85rem; font-weight:500; transition:color 0.2s; }
+.nav-links a:hover { color:var(--forest); }
+.nav-cta { background:var(--forest); color:white; padding:8px 20px; border-radius:8px; text-decoration:none; font-size:0.85rem; font-weight:600; transition:background 0.2s; }
+.nav-cta:hover { background:var(--forest-light); }
+
+/* HERO */
+.hero { padding:5rem 5% 4rem; position:relative; overflow:hidden; }
+.hero::before { content:''; position:absolute; top:-100px; right:-100px; width:500px; height:500px; background:radial-gradient(circle, rgba(116,198,157,0.15) 0%, transparent 70%); pointer-events:none; }
+.hero-tag { display:inline-flex; align-items:center; gap:6px; background:rgba(26,71,49,0.08); color:var(--forest); font-size:12px; font-weight:600; padding:6px 14px; border-radius:20px; margin-bottom:1.5rem; border:1px solid var(--border); }
+.hero-tag::before { content:'🇮🇳'; font-size:14px; }
+.hero h1 { font-size:clamp(2rem,5vw,3.8rem); font-weight:800; line-height:1.1; max-width:750px; margin-bottom:1.5rem; letter-spacing:-1px; }
+.hero h1 .hi { display:block; color:var(--forest); }
+.hero h1 .en { display:none; }
+.hero h1 em { color:var(--gold); font-style:normal; }
+.hero-sub { font-size:1.05rem; color:var(--ink-mid); max-width:580px; line-height:1.8; margin-bottom:2.5rem; }
+.hero-btns { display:flex; gap:1rem; flex-wrap:wrap; }
+.btn-primary { background:var(--forest); color:white; padding:14px 28px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.95rem; transition:all 0.2s; display:inline-flex; align-items:center; gap:8px; }
+.btn-primary:hover { background:var(--forest-light); transform:translateY(-1px); box-shadow:var(--shadow-lg); }
+.btn-secondary { background:transparent; color:var(--forest); padding:14px 28px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.95rem; border:2px solid var(--forest); transition:all 0.2s; }
+.btn-secondary:hover { background:var(--forest); color:white; }
+.crisis-ticker { background:var(--forest); color:white; padding:12px 5%; font-size:13px; display:flex; gap:3rem; overflow:hidden; }
+.ticker-item { display:flex; align-items:center; gap:8px; white-space:nowrap; }
+.ticker-dot { width:6px; height:6px; background:var(--gold-light); border-radius:50%; }
+
+/* STATS */
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1px; background:var(--border); margin:0; }
+.stat { background:var(--warm); padding:1.5rem 5%; text-align:center; }
+.stat-num { font-size:1.8rem; font-weight:800; color:var(--forest); }
+.stat-label { font-size:0.8rem; color:var(--muted); margin-top:4px; line-height:1.4; }
+
+/* SECTIONS */
+.section { padding:4rem 5%; }
+.section-alt { background:var(--warm); }
+.section-header { margin-bottom:2.5rem; }
+.section-tag { font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--forest-light); margin-bottom:8px; display:flex; align-items:center; gap:6px; }
+.section-tag::before { content:''; width:20px; height:2px; background:var(--forest-light); }
+.section-title { font-size:clamp(1.5rem,3vw,2.2rem); font-weight:800; color:var(--ink); letter-spacing:-0.5px; }
+.section-sub { color:var(--muted); font-size:0.95rem; margin-top:8px; line-height:1.7; }
+
+/* CARDS GRID */
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.25rem; }
+.card { background:var(--card); border-radius:16px; padding:1.5rem; border:1px solid var(--border); transition:all 0.25s; cursor:pointer; text-decoration:none; color:var(--ink); display:block; position:relative; overflow:hidden; }
+.card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--forest); transform:scaleX(0); transition:transform 0.2s; transform-origin:left; }
+.card:hover { border-color:var(--forest-light); box-shadow:var(--shadow-lg); transform:translateY(-2px); }
+.card:hover::after { transform:scaleX(1); }
+.card-icon { width:48px; height:48px; border-radius:12px; background:rgba(26,71,49,0.08); display:flex; align-items:center; justify-content:center; font-size:22px; margin-bottom:1rem; }
+.card-badge { position:absolute; top:1rem; right:1rem; font-size:10px; font-weight:700; padding:3px 8px; border-radius:20px; }
+.badge-hot { background:#FEECC8; color:#854F0B; }
+.badge-new { background:#D1FAE5; color:#065F46; }
+.badge-zero { background:#EDE9FE; color:#5B21B6; }
+.card-title { font-size:1rem; font-weight:700; margin-bottom:6px; line-height:1.4; }
+.card-title .hi { display:block; }
+.card-title .en { display:none; }
+.card-desc { font-size:0.85rem; color:var(--muted); line-height:1.6; }
+.card-desc .hi { display:block; }
+.card-desc .en { display:none; }
+.card-meta { display:flex; gap:8px; flex-wrap:wrap; margin-top:1rem; }
+.meta-chip { font-size:11px; padding:3px 8px; border-radius:6px; background:rgba(26,71,49,0.06); color:var(--forest); font-weight:500; }
+
+/* CALCULATOR PROMO */
+.calc-promo { background:linear-gradient(135deg,var(--forest) 0%,var(--forest-mid) 100%); border-radius:20px; padding:3rem; display:flex; justify-content:space-between; align-items:center; gap:2rem; flex-wrap:wrap; margin:0 5% 4rem; }
+.calc-promo-text h3 { font-size:1.6rem; font-weight:800; color:white; margin-bottom:8px; }
+.calc-promo-text p { color:rgba(255,255,255,0.75); font-size:0.95rem; line-height:1.7; max-width:400px; }
+.calc-btns { display:flex; gap:1rem; flex-wrap:wrap; }
+.btn-white { background:white; color:var(--forest); padding:12px 24px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.9rem; transition:all 0.2s; white-space:nowrap; }
+.btn-white:hover { background:var(--gold-light); }
+.btn-outline-white { background:transparent; color:white; padding:12px 24px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.9rem; border:2px solid rgba(255,255,255,0.4); transition:all 0.2s; white-space:nowrap; }
+.btn-outline-white:hover { border-color:white; }
+
+/* FEATURED ARTICLE */
+.featured-grid { display:grid; grid-template-columns:1.5fr 1fr; gap:1.5rem; }
+.featured-card { background:var(--card); border-radius:16px; overflow:hidden; border:1px solid var(--border); text-decoration:none; color:var(--ink); display:block; transition:all 0.25s; }
+.featured-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-2px); }
+.featured-img { height:200px; background:linear-gradient(135deg,var(--forest) 0%,var(--forest-light) 100%); display:flex; align-items:center; justify-content:center; font-size:4rem; }
+.featured-body { padding:1.5rem; }
+.featured-tag { font-size:11px; font-weight:700; color:var(--forest-light); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px; }
+.featured-title { font-size:1.1rem; font-weight:700; line-height:1.4; margin-bottom:8px; }
+.featured-title .hi { display:block; }
+.featured-title .en { display:none; }
+.featured-desc { font-size:0.85rem; color:var(--muted); line-height:1.6; }
+.featured-desc .hi { display:block; }
+.featured-desc .en { display:none; }
+.side-cards { display:flex; flex-direction:column; gap:1rem; }
+.side-card { background:var(--card); border-radius:12px; padding:1.2rem; border:1px solid var(--border); text-decoration:none; color:var(--ink); display:flex; gap:1rem; align-items:flex-start; transition:all 0.2s; }
+.side-card:hover { border-color:var(--forest-light); box-shadow:var(--shadow); }
+.side-icon { font-size:1.8rem; flex-shrink:0; }
+.side-title { font-size:0.9rem; font-weight:600; line-height:1.4; }
+.side-title .hi { display:block; }
+.side-title .en { display:none; }
+.side-meta { font-size:11px; color:var(--muted); margin-top:3px; }
+
+/* NEWSLETTER */
+.newsletter { background:var(--warm); border:1px solid var(--border); border-radius:20px; padding:3rem; text-align:center; margin:0 5% 4rem; }
+.newsletter h3 { font-size:1.5rem; font-weight:800; margin-bottom:8px; }
+.newsletter p { color:var(--muted); margin-bottom:1.5rem; font-size:0.95rem; }
+.newsletter-form { display:flex; gap:10px; max-width:460px; margin:0 auto; }
+.newsletter-input { flex:1; padding:12px 16px; border:1.5px solid var(--border); border-radius:10px; font-family:'Sora',sans-serif; font-size:0.9rem; background:white; outline:none; transition:border-color 0.2s; }
+.newsletter-input:focus { border-color:var(--forest); }
+.newsletter-btn { background:var(--forest); color:white; padding:12px 24px; border-radius:10px; border:none; font-family:'Sora',sans-serif; font-size:0.9rem; font-weight:600; cursor:pointer; transition:background 0.2s; white-space:nowrap; }
+.newsletter-btn:hover { background:var(--forest-light); }
+
+/* FOOTER */
+footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 2rem; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; margin-bottom:2rem; }
+.footer-brand .logo-text { color:white; font-size:1.2rem; }
+.footer-brand p { font-size:0.85rem; line-height:1.7; margin-top:1rem; color:rgba(255,255,255,0.6); max-width:240px; }
+.footer-col h4 { color:white; font-weight:700; font-size:0.9rem; margin-bottom:1rem; }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
+.footer-col a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.85rem; transition:color 0.2s; }
+.footer-col a:hover { color:var(--gold-light); }
+.footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; flex-wrap:wrap; gap:1rem; }
+
+@media (max-width:768px) {
+  .nav-links { display:none; }
+  .featured-grid { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+  .calc-promo { flex-direction:column; }
+  .stats { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:480px) {
+  .footer-grid { grid-template-columns:1fr; }
+  .newsletter-form { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<!-- LANGUAGE BAR -->
+<div class="lang-bar">
+  <span class="lang-label">भाषा / Language:</span>
+  <button class="lang-btn active" onclick="setLang('hi')" id="btn-hi">हिंदी</button>
+  <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-icon">💡</div>
+    <span class="logo-text">Smart<span>Bachao</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="energy.html" class="hi">ऊर्जा</a><a href="energy.html" class="en" style="display:none">Energy</a></li>
+    <li><a href="transport.html" class="hi">यातायात</a><a href="transport.html" class="en" style="display:none">Transport</a></li>
+    <li><a href="food.html" class="hi">खाना</a><a href="food.html" class="en" style="display:none">Food</a></li>
+    <li><a href="money.html" class="hi">पैसा</a><a href="money.html" class="en" style="display:none">Money</a></li>
+    <li><a href="calculators.html" class="hi">कैलकुलेटर</a><a href="calculators.html" class="en" style="display:none">Calculators</a></li>
+  </ul>
+  <a href="calculators.html" class="nav-cta hi">फ्री कैलकुलेटर →</a>
+  <a href="calculators.html" class="nav-cta en" style="display:none">Free Calculators →</a>
+</nav>
+
+<!-- CRISIS TICKER -->
+<div class="crisis-ticker">
+  <div class="ticker-item"><div class="ticker-dot"></div><span class="hi">LPG ₹913 दिल्ली में — इंडक्शन की मांग 30 गुना बढ़ी</span><span class="en" style="display:none">LPG ₹913 in Delhi — Induction demand up 30x</span></div>
+  <div class="ticker-item"><div class="ticker-dot"></div><span class="hi">पेट्रोल ₹100+ — साइकिल की बिक्री रिकॉर्ड ऊंचाई पर</span><span class="en" style="display:none">Petrol ₹100+ — Bicycle sales hit record high</span></div>
+  <div class="ticker-item"><div class="ticker-dot"></div><span class="hi">PM सूर्य घर — 2.4 करोड़ घरों को मुफ्त बिजली</span><span class="en" style="display:none">PM Surya Ghar — Free electricity for 2.4 crore homes</span></div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">भारत का स्मार्ट बचत गाइड</div>
+  <h1>
+    <span class="hi">महंगाई में भी <em>स्मार्ट</em> रहो</span>
+    <span class="en">Stay <em>Smart</em> Through the Crisis</span>
+  </h1>
+  <p class="hero-sub hi">LPG महंगी, पेट्रोल महंगा, बिजली बिल बढ़ रहा है — SmartBachao पर हर समस्या का सरल, सस्ता और असली हल मिलेगा। हिंदी में, आपकी भाषा में।</p>
+  <p class="hero-sub en" style="display:none">LPG prices up, petrol expensive, electricity bills rising — SmartBachao gives you real, practical, affordable solutions for every crisis. In Hindi and English, for every Indian.</p>
+  <div class="hero-btns">
+    <a href="energy.html" class="btn-primary hi">⚡ ऊर्जा समाधान देखें</a>
+    <a href="energy.html" class="btn-primary en" style="display:none">⚡ See Energy Solutions</a>
+    <a href="calculators.html" class="btn-secondary hi">🧮 बचत कैलकुलेटर</a>
+    <a href="calculators.html" class="btn-secondary en" style="display:none">🧮 Savings Calculator</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-num">50+</div><div class="stat-label hi">समाधान गाइड</div><div class="stat-label en" style="display:none">Solution Guides</div></div>
+  <div class="stat"><div class="stat-num">6</div><div class="stat-label hi">विषय क्षेत्र</div><div class="stat-label en" style="display:none">Topic Sections</div></div>
+  <div class="stat"><div class="stat-num">₹0</div><div class="stat-label hi">पूरी तरह मुफ्त</div><div class="stat-label en" style="display:none">Completely Free</div></div>
+  <div class="stat"><div class="stat-num">2</div><div class="stat-label hi">भाषाएं — Hindi & English</div><div class="stat-label en" style="display:none">Languages — Hindi & English</div></div>
+</div>
+
+<!-- ENERGY SECTION -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag hi">⚡ ऊर्जा संकट</div>
+    <div class="section-tag en" style="display:none">⚡ Energy Crisis</div>
+    <h2 class="section-title hi">LPG, बिजली और गैस — असली हल</h2>
+    <h2 class="section-title en" style="display:none">LPG, Electricity & Gas — Real Solutions</h2>
+    <p class="section-sub hi">गैस सिलेंडर ₹913 हो गया। इंडक्शन, PNG कनेक्शन, सोलर — सब कुछ यहाँ समझें।</p>
+    <p class="section-sub en" style="display:none">LPG cylinder at ₹913. Understand induction, PNG connection, solar — everything explained simply.</p>
+  </div>
+  <div class="cards">
+    <a href="png-connection-guide.html" class="card">
+      <div class="card-icon">🔗</div>
+      <span class="card-badge badge-zero">Zero Competition</span>
+      <div class="card-title"><span class="hi">PNG कनेक्शन कैसे मिलेगा — पूरी गाइड</span><span class="en">How to Get PNG Connection — Complete Guide</span></div>
+      <div class="card-desc"><span class="hi">LPG बंद — अब पाइप्ड गैस लगवाओ। दिल्ली, मुंबई, हैदराबाद में कैसे अप्लाई करें, स्टेप बाय स्टेप।</span><span class="en">LPG shortage? Get piped gas connection. Step-by-step guide for Delhi, Mumbai, Hyderabad.</span></div>
+      <div class="card-meta"><span class="meta-chip hi">200K+ खोजें</span><span class="meta-chip en" style="display:none">200K+ searches</span><span class="meta-chip hi">मुफ्त गाइड</span><span class="meta-chip en" style="display:none">Free guide</span></div>
+    </a>
+    <a href="best-induction-cooktop-india.html" class="card">
+      <div class="card-icon">🍳</div>
+      <span class="card-badge badge-hot">🔥 Trending</span>
+      <div class="card-title"><span class="hi">रोटी के लिए बेस्ट इंडक्शन कुकटॉप 2026</span><span class="en">Best Induction Cooktop for Roti India 2026</span></div>
+      <div class="card-desc"><span class="hi">इंडक्शन पर रोटी बनती है या नहीं? कौन सा खरीदें? सच्ची समीक्षा और तुलना।</span><span class="en">Can you make roti on induction? Which one to buy? Honest reviews and comparison.</span></div>
+      <div class="card-meta"><span class="meta-chip">150K+ searches</span><span class="meta-chip">Amazon Affiliate</span></div>
+    </a>
+    <a href="bijli-bill-kam-kare.html" class="card">
+      <div class="card-icon">💡</div>
+      <span class="card-badge badge-zero">Hindi Only</span>
+      <div class="card-title"><span class="hi">बिजली बिल कैसे कम करें — 10 असली तरीके</span><span class="en">How to Reduce Electricity Bill — 10 Real Ways</span></div>
+      <div class="card-desc"><span class="hi">गर्मी में AC चला रहे हो? बिजली बिल ₹500 से ₹3000 हो गया? यहाँ असली बचत के तरीके हैं।</span><span class="en">Running AC in summer heat? Bill jumped to ₹3000? Here are real ways to cut it down.</span></div>
+      <div class="card-meta"><span class="meta-chip">300K+ searches</span><span class="meta-chip hi">हिंदी गाइड</span><span class="meta-chip en" style="display:none">Hindi guide</span></div>
+    </a>
+    <a href="pm-surya-ghar-guide.html" class="card">
+      <div class="card-icon">☀️</div>
+      <span class="card-badge badge-new">Govt Scheme</span>
+      <div class="card-title"><span class="hi">PM सूर्य घर योजना — अप्लाई कैसे करें</span><span class="en">PM Surya Ghar Scheme — How to Apply</span></div>
+      <div class="card-desc"><span class="hi">सरकार दे रही है मुफ्त सोलर पैनल। 60% सब्सिडी। कौन ले सकता है? कैसे अप्लाई करें?</span><span class="en">Government giving free solar panels. 60% subsidy. Who's eligible? How to apply?</span></div>
+      <div class="card-meta"><span class="meta-chip">500K+ searches</span><span class="meta-chip hi">सरकारी योजना</span><span class="meta-chip en" style="display:none">Govt Scheme</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- CALCULATOR PROMO -->
+<div class="calc-promo">
+  <div class="calc-promo-text">
+    <h3 class="hi">⚡ AC बंद करो — कितनी बचत होगी?</h3>
+    <h3 class="en" style="display:none">⚡ Switch Off AC — How Much Will You Save?</h3>
+    <p class="hi">हमारा फ्री कैलकुलेटर बताएगा — AC vs Cooler में आपके घर की असली बचत क्या होगी। अभी चेक करो।</p>
+    <p class="en" style="display:none">Our free calculator shows you exactly how much you save switching from AC to cooler — based on your actual usage and city electricity rate.</p>
+  </div>
+  <div class="calc-btns">
+    <a href="calculators.html#ac-cooler" class="btn-white hi">कैलकुलेटर खोलें →</a>
+    <a href="calculators.html#ac-cooler" class="btn-white en" style="display:none">Open Calculator →</a>
+    <a href="calculators.html" class="btn-outline-white hi">सभी कैलकुलेटर</a>
+    <a href="calculators.html" class="btn-outline-white en" style="display:none">All Calculators</a>
+  </div>
+</div>
+
+<!-- TRANSPORT SECTION -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="section-tag hi">🚲 यातायात</div>
+    <div class="section-tag en" style="display:none">🚲 Transport</div>
+    <h2 class="section-title hi">पेट्रोल महंगा — स्मार्ट विकल्प</h2>
+    <h2 class="section-title en" style="display:none">Petrol Expensive — Smart Alternatives</h2>
+    <p class="section-sub hi">साइकिल, ई-साइकिल, EV स्कूटर, CNG — कौन सा विकल्प आपके लिए सही है?</p>
+    <p class="section-sub en" style="display:none">Cycle, e-cycle, EV scooter, CNG — which alternative is right for you?</p>
+  </div>
+  <div class="cards">
+    <a href="cycle-buying-guide-india.html" class="card">
+      <div class="card-icon">🚲</div>
+      <span class="card-badge badge-hot">Price Rising Soon</span>
+      <div class="card-title"><span class="hi">साइकिल खरीदो अभी — कीमत बढ़ने से पहले</span><span class="en">Buy Cycle Now — Before Prices Rise</span></div>
+      <div class="card-desc"><span class="hi">पेट्रोल ₹100+ हो गया। साइकिल की मांग रिकॉर्ड ऊंचाई पर। दाम बढ़ने से पहले कौन सी साइकिल खरीदें?</span><span class="en">Petrol at ₹100+. Cycle demand at record high. Which cycle to buy before prices spike?</span></div>
+      <div class="card-meta"><span class="meta-chip">Hero / Atlas / Firefox</span><span class="meta-chip">Flipkart Affiliate</span></div>
+    </a>
+    <a href="electric-scooter-vs-petrol.html" class="card">
+      <div class="card-icon">⚡</div>
+      <span class="card-badge badge-new">Calculator Inside</span>
+      <div class="card-title"><span class="hi">EV vs पेट्रोल — हर महीने कितनी बचत?</span><span class="en">EV vs Petrol — Monthly Savings Calculator</span></div>
+      <div class="card-desc"><span class="hi">Ola S1 लें या Activa? हमारा कैलकुलेटर बताएगा आपकी असली बचत — आपके शहर और दूरी के हिसाब से।</span><span class="en">Ola S1 or Activa? Our calculator shows real savings based on your city and daily distance.</span></div>
+      <div class="card-meta"><span class="meta-chip">180K+ searches</span><span class="meta-chip">EV Affiliate</span></div>
+    </a>
+    <a href="cng-conversion-guide.html" class="card">
+      <div class="card-icon">🔄</div>
+      <span class="card-badge badge-hot">Worth It?</span>
+      <div class="card-title"><span class="hi">CNG किट — पेट्रोल से CNG में बदलना कितना सही?</span><span class="en">CNG Conversion Kit — Is It Worth It in 2026?</span></div>
+      <div class="card-desc"><span class="hi">CNG किट लगाने का खर्च ₹12,000–₹20,000। लेकिन क्या यह सच में फायदेमंद है? पूरी हिसाब-किताब।</span><span class="en">CNG kit costs ₹12,000–₹20,000. But is it actually worth it? Complete cost analysis.</span></div>
+      <div class="card-meta"><span class="meta-chip">280K+ searches</span><span class="meta-chip hi">हिंदी गाइड</span><span class="meta-chip en" style="display:none">Hindi guide</span></div>
+    </a>
+    <a href="ecycle-vs-cycle-india.html" class="card">
+      <div class="card-icon">🔋</div>
+      <span class="card-badge badge-new">New Guide</span>
+      <div class="card-title"><span class="hi">ई-साइकिल vs साधारण साइकिल — कौन सी लें?</span><span class="en">E-Cycle vs Regular Cycle — Which to Buy?</span></div>
+      <div class="card-desc"><span class="hi">ई-साइकिल ₹25,000–₹60,000 की। क्या यह साधारण साइकिल से बेहतर है? इस्तेमाल और बचत का सच।</span><span class="en">E-cycles cost ₹25,000–₹60,000. Is it better than a regular cycle? Real usage and savings truth.</span></div>
+      <div class="card-meta"><span class="meta-chip">120K+ searches</span><span class="meta-chip">Amazon Affiliate</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOD SECTION -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag hi">🌾 खाना और बगीचा</div>
+    <div class="section-tag en" style="display:none">🌾 Food & Garden</div>
+    <h2 class="section-title hi">सब्जी महंगी — घर में उगाओ</h2>
+    <h2 class="section-title en" style="display:none">Vegetables Expensive — Grow at Home</h2>
+    <p class="section-sub hi">खाद संकट से सब्जियों के दाम बढ़ रहे हैं। घर में बगीचा लगाओ और बचत करो।</p>
+    <p class="section-sub en" style="display:none">Fertilizer crisis pushing vegetable prices up. Grow your own food at home and save money.</p>
+  </div>
+  <div class="cards">
+    <a href="ghar-mein-sabzi-kaise-ugaye.html" class="card">
+      <div class="card-icon">🥬</div>
+      <span class="card-badge badge-zero">Hindi Only</span>
+      <div class="card-title"><span class="hi">छत या बालकनी में सब्जी कैसे उगाएं</span><span class="en">How to Grow Vegetables on Terrace/Balcony</span></div>
+      <div class="card-desc"><span class="hi">टमाटर, मिर्च, धनिया, पालक — बिना जमीन के, सिर्फ गमले में। शुरुआत से पूरी हिंदी गाइड।</span><span class="en">Tomatoes, chilli, coriander, spinach — in pots, no land needed. Complete beginner's guide.</span></div>
+      <div class="card-meta"><span class="meta-chip">600K+ searches</span><span class="meta-chip">Seeds Affiliate</span></div>
+    </a>
+    <a href="budget-meal-plan-india.html" class="card">
+      <div class="card-icon">🍱</div>
+      <span class="card-badge badge-hot">₹500/week</span>
+      <div class="card-title"><span class="hi">₹500 में पूरे हफ्ते का खाना — पूरा प्लान</span><span class="en">Full Week Meal Plan Under ₹500 — Complete Guide</span></div>
+      <div class="card-desc"><span class="hi">महंगाई में पोषक खाना कैसे खाएं? ₹500 का हफ्ते का प्लान — सस्ता, स्वस्थ और स्वादिष्ट।</span><span class="en">How to eat nutritiously on a tight budget? Complete ₹500/week meal plan — cheap, healthy, tasty.</span></div>
+      <div class="card-meta"><span class="meta-chip">150K+ searches</span><span class="meta-chip hi">हिंदी रेसिपी</span><span class="meta-chip en" style="display:none">Hindi recipes</span></div>
+    </a>
+    <a href="nano-urea-hindi-guide.html" class="card">
+      <div class="card-icon">🌱</div>
+      <span class="card-badge badge-zero">Farmers Guide</span>
+      <div class="card-title"><span class="hi">नैनो यूरिया क्या है — किसानों के लिए गाइड</span><span class="en">What is Nano Urea — Complete Guide for Farmers</span></div>
+      <div class="card-desc"><span class="hi">खाद संकट में सरकार कह रही है नैनो यूरिया इस्तेमाल करो। यह क्या है? कैसे काम करता है?</span><span class="en">During fertilizer crisis, govt pushing nano urea. What is it? How does it work?</span></div>
+      <div class="card-meta"><span class="meta-chip">250K+ searches</span><span class="meta-chip hi">किसान गाइड</span><span class="meta-chip en" style="display:none">Farmers guide</span></div>
+    </a>
+    <a href="cheap-protein-india.html" class="card">
+      <div class="card-icon">💪</div>
+      <span class="card-badge badge-new">Health + Budget</span>
+      <div class="card-title"><span class="hi">सबसे सस्ते प्रोटीन स्रोत भारत में</span><span class="en">Cheapest Protein Sources in India 2026</span></div>
+      <div class="card-desc"><span class="hi">चिकन, दाल, अंडे, सोयाबीन — कौन सा प्रोटीन सबसे सस्ता और सबसे अच्छा है? तुलना और गाइड।</span><span class="en">Chicken, dal, eggs, soya — which protein is cheapest and best? Full comparison guide.</span></div>
+      <div class="card-meta"><span class="meta-chip">200K+ searches</span><span class="meta-chip">Health content</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- MONEY SECTION -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="section-tag hi">💸 पैसा और बचत</div>
+    <div class="section-tag en" style="display:none">💸 Money & Savings</div>
+    <h2 class="section-title hi">महंगाई में पैसा बचाने के असली तरीके</h2>
+    <h2 class="section-title en" style="display:none">Real Ways to Save Money During Inflation</h2>
+    <p class="section-sub hi">रुपया कमजोर, महंगाई तेज — अपनी बचत को कैसे बचाएं और बढ़ाएं?</p>
+    <p class="section-sub en" style="display:none">Rupee weak, inflation high — how to protect and grow your savings?</p>
+  </div>
+  <div class="cards">
+    <a href="mehngai-mein-paise-bachao.html" class="card">
+      <div class="card-icon">🛡️</div>
+      <span class="card-badge badge-zero">Hindi Only</span>
+      <div class="card-title"><span class="hi">महंगाई में पैसे कैसे बचाएं — 15 असली तरीके</span><span class="en">How to Save Money During Inflation — 15 Real Ways</span></div>
+      <div class="card-desc"><span class="hi">हर चीज महंगी हो गई है। लेकिन स्मार्ट लोग फिर भी बचत करते हैं। यहाँ असली और काम आने वाले तरीके हैं।</span><span class="en">Everything is expensive. But smart people still save. Here are real, practical ways that actually work.</span></div>
+      <div class="card-meta"><span class="meta-chip">800K+ searches</span><span class="meta-chip">Finance RPM ₹5-15</span></div>
+    </a>
+    <a href="petrol-price-tracker.html" class="card">
+      <div class="card-icon">⛽</div>
+      <span class="card-badge badge-hot">Daily Updated</span>
+      <div class="card-title"><span class="hi">आज का पेट्रोल भाव — शहर के अनुसार</span><span class="en">Today's Petrol Price — City-Wise</span></div>
+      <div class="card-desc"><span class="hi">दिल्ली, मुंबई, बेंगलुरु, हैदराबाद — आज का पेट्रोल और डीजल का ताजा भाव। रोज अपडेट।</span><span class="en">Delhi, Mumbai, Bengaluru, Hyderabad — today's fresh petrol and diesel prices. Updated daily.</span></div>
+      <div class="card-meta"><span class="meta-chip hi">रोज़ लाखों खोजें</span><span class="meta-chip en" style="display:none">Millions search daily</span><span class="meta-chip">AdSense Gold</span></div>
+    </a>
+    <a href="rupee-girne-ka-asar.html" class="card">
+      <div class="card-icon">📉</div>
+      <span class="card-badge badge-new">Economy Guide</span>
+      <div class="card-title"><span class="hi">रुपया गिरने से आम आदमी पर क्या असर?</span><span class="en">How Does Rupee Falling Affect Common People?</span></div>
+      <div class="card-desc"><span class="hi">डॉलर के मुकाबले रुपया ₹84+ पर। इसका आपकी रोजमर्रा की जिंदगी पर क्या असर? सरल भाषा में।</span><span class="en">Rupee at ₹84+ vs dollar. What does this mean for your daily life? Explained simply.</span></div>
+      <div class="card-meta"><span class="meta-chip">Finance category</span><span class="meta-chip hi">उच्च RPM</span><span class="meta-chip en" style="display:none">High RPM</span></div>
+    </a>
+    <a href="gold-vs-fd-vs-stocks-inflation.html" class="card">
+      <div class="card-icon">🥇</div>
+      <span class="card-badge badge-hot">Investment Guide</span>
+      <div class="card-title"><span class="hi">सोना vs FD vs शेयर — महंगाई में क्या बेहतर?</span><span class="en">Gold vs FD vs Stocks — What's Better During Inflation?</span></div>
+      <div class="card-desc"><span class="hi">महंगाई में पैसा कहाँ लगाएं? सोना, FD, म्यूचुअल फंड या शेयर — किसमें सबसे ज्यादा फायदा?</span><span class="en">Where to invest during inflation? Gold, FD, Mutual Funds or Stocks — which gives best returns?</span></div>
+      <div class="card-meta"><span class="meta-chip">Groww Affiliate</span><span class="meta-chip">₹500/signup</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- FEATURED ARTICLES -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag hi">📰 जरूरी गाइड</div>
+    <div class="section-tag en" style="display:none">📰 Essential Guides</div>
+    <h2 class="section-title hi">अभी सबसे जरूरी जानकारी</h2>
+    <h2 class="section-title en" style="display:none">Most Essential Information Right Now</h2>
+  </div>
+  <div class="featured-grid">
+    <a href="png-connection-guide.html" class="featured-card">
+      <div class="featured-img">🔗</div>
+      <div class="featured-body">
+        <div class="featured-tag hi">⚡ सबसे जरूरी — PNG गाइड</div>
+        <div class="featured-tag en" style="display:none">⚡ Most Important — PNG Guide</div>
+        <div class="featured-title">
+          <span class="hi">PNG कनेक्शन कैसे मिलेगा? — दिल्ली, मुंबई, हैदराबाद की पूरी प्रक्रिया</span>
+          <span class="en">How to Get PNG Connection? — Complete Process for Delhi, Mumbai, Hyderabad</span>
+        </div>
+        <div class="featured-desc">
+          <span class="hi">LPG सिलेंडर की किल्लत और ₹913 का दाम — अब समय आ गया है PNG पाइप्ड गैस लगवाने का। यहाँ जानें कि IGL, MGL और अन्य कंपनियों से कनेक्शन कैसे लें — क्या दस्तावेज चाहिए, कितना खर्च, कितना समय।</span>
+          <span class="en">LPG shortage and ₹913 price — time to get PNG piped gas. Learn how to apply with IGL, MGL and other companies — documents needed, cost, and timeline.</span>
+        </div>
+      </div>
+    </a>
+    <div class="side-cards">
+      <a href="bijli-bill-kam-kare.html" class="side-card">
+        <div class="side-icon">💡</div>
+        <div>
+          <div class="side-title"><span class="hi">बिजली बिल ₹3000 से ₹800 कैसे करें?</span><span class="en">How to Cut Electricity Bill from ₹3000 to ₹800?</span></div>
+          <div class="side-meta hi">300K+ खोजें • हिंदी गाइड</div>
+          <div class="side-meta en" style="display:none">300K+ searches • Hindi guide</div>
+        </div>
+      </a>
+      <a href="pm-surya-ghar-guide.html" class="side-card">
+        <div class="side-icon">☀️</div>
+        <div>
+          <div class="side-title"><span class="hi">PM सूर्य घर — 60% सब्सिडी पर सोलर पैनल</span><span class="en">PM Surya Ghar — Solar Panels at 60% Subsidy</span></div>
+          <div class="side-meta hi">500K+ खोजें • सरकारी योजना</div>
+          <div class="side-meta en" style="display:none">500K+ searches • Govt Scheme</div>
+        </div>
+      </a>
+      <a href="cycle-buying-guide-india.html" class="side-card">
+        <div class="side-icon">🚲</div>
+        <div>
+          <div class="side-title"><span class="hi">साइकिल खरीदो — दाम बढ़ने से पहले</span><span class="en">Buy Cycle — Before Prices Rise</span></div>
+          <div class="side-meta hi">Hero, Atlas, Firefox तुलना</div>
+          <div class="side-meta en" style="display:none">Hero, Atlas, Firefox comparison</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <h3 class="hi">📬 हर हफ्ते नई बचत टिप्स पाएं</h3>
+  <h3 class="en" style="display:none">📬 Get New Savings Tips Every Week</h3>
+  <p class="hi">SmartBachao न्यूजलेटर — महंगाई की हर नई खबर और उसका हल, सीधे आपके इनबॉक्स में।</p>
+  <p class="en" style="display:none">SmartBachao newsletter — every new inflation update and its solution, straight to your inbox.</p>
+  <div class="newsletter-form">
+    <input type="email" class="newsletter-input" placeholder="आपका ईमेल / Your email">
+    <button class="newsletter-btn hi" onclick="subscribe()">सब्सक्राइब करें</button>
+    <button class="newsletter-btn en" style="display:none" onclick="subscribe()">Subscribe</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo"><div class="logo-icon">💡</div><span class="logo-text" style="color:white">Smart<span style="color:var(--gold-light)">Bachao</span></span></div>
+      <p class="hi">भारत का स्मार्ट बचत गाइड। LPG संकट, पेट्रोल महंगाई, बिजली बिल — हर समस्या का हल।</p>
+      <p class="en" style="display:none">India's smart savings guide. LPG crisis, petrol prices, electricity bills — solutions to every problem.</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="hi">ऊर्जा</h4><h4 class="en" style="display:none">Energy</h4>
+      <ul>
+        <li><a href="png-connection-guide.html" class="hi">PNG कनेक्शन गाइड</a><a href="png-connection-guide.html" class="en" style="display:none">PNG Connection Guide</a></li>
+        <li><a href="best-induction-cooktop-india.html" class="hi">बेस्ट इंडक्शन कुकटॉप</a><a href="best-induction-cooktop-india.html" class="en" style="display:none">Best Induction Cooktop</a></li>
+        <li><a href="bijli-bill-kam-kare.html" class="hi">बिजली बिल कम करें</a><a href="bijli-bill-kam-kare.html" class="en" style="display:none">Reduce Electricity Bill</a></li>
+        <li><a href="pm-surya-ghar-guide.html" class="hi">PM सूर्य घर योजना</a><a href="pm-surya-ghar-guide.html" class="en" style="display:none">PM Surya Ghar Scheme</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="hi">यातायात</h4><h4 class="en" style="display:none">Transport</h4>
+      <ul>
+        <li><a href="cycle-buying-guide-india.html" class="hi">साइकिल खरीद गाइड</a><a href="cycle-buying-guide-india.html" class="en" style="display:none">Cycle Buying Guide</a></li>
+        <li><a href="electric-scooter-vs-petrol.html" class="hi">EV vs पेट्रोल</a><a href="electric-scooter-vs-petrol.html" class="en" style="display:none">EV vs Petrol</a></li>
+        <li><a href="cng-conversion-guide.html" class="hi">CNG किट गाइड</a><a href="cng-conversion-guide.html" class="en" style="display:none">CNG Kit Guide</a></li>
+        <li><a href="ecycle-vs-cycle-india.html" class="hi">ई-साइकिल vs साइकिल</a><a href="ecycle-vs-cycle-india.html" class="en" style="display:none">E-Cycle vs Cycle</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="hi">और जानें</h4><h4 class="en" style="display:none">More</h4>
+      <ul>
+        <li><a href="about.html" class="hi">हमारे बारे में</a><a href="about.html" class="en" style="display:none">About Us</a></li>
+        <li><a href="calculators.html" class="hi">कैलकुलेटर</a><a href="calculators.html" class="en" style="display:none">Calculators</a></li>
+        <li><a href="contact.html" class="hi">संपर्क करें</a><a href="contact.html" class="en" style="display:none">Contact Us</a></li>
+        <li><a href="privacy-policy.html" class="hi">गोपनीयता नीति</a><a href="privacy-policy.html" class="en" style="display:none">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="hi">© 2026 SmartBachao.com — भारत का स्मार्ट बचत गाइड</span>
+    <span class="en" style="display:none">© 2026 SmartBachao.com — India's Smart Savings Guide</span>
+    <span class="hi">हिंदी और English दोनों में</span>
+    <span class="en" style="display:none">Available in Hindi & English</span>
+  </div>
+</footer>
+
+<script>
+// AUTO LANGUAGE DETECTION
+function detectLang() {
+  const saved = localStorage.getItem('sb-lang');
+  if (saved) return saved;
+  const browserLang = navigator.language || navigator.userLanguage || 'hi';
+  return browserLang.startsWith('hi') ? 'hi' : 'en';
+}
+
+function setLang(lang) {
+  localStorage.setItem('sb-lang', lang);
+  document.documentElement.lang = lang;
+  // Toggle all .hi and .en elements
+  document.querySelectorAll('.hi').forEach(el => {
+    el.style.display = lang === 'hi' ? '' : 'none';
+  });
+  document.querySelectorAll('.en').forEach(el => {
+    el.style.display = lang === 'en' ? '' : 'none';
+  });
+  // Update active button
+  document.getElementById('btn-hi').classList.toggle('active', lang === 'hi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+
+function subscribe() {
+  const input = document.querySelector('.newsletter-input');
+  if (input.value && input.value.includes('@')) {
+    input.value = '';
+    alert(document.documentElement.lang === 'hi' ? 'धन्यवाद! आप सब्सक्राइब हो गए हैं। 🎉' : 'Thank you! You are now subscribed. 🎉');
+  } else {
+    alert(document.documentElement.lang === 'hi' ? 'कृपया सही ईमेल डालें।' : 'Please enter a valid email.');
+  }
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', () => setLang(detectLang()));
+</script>
+</body>
+</html>
