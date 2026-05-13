@@ -69,9 +69,10 @@ nav { display:flex; justify-content:space-between; align-items:center; padding:1
 .btn-primary:hover { background:var(--forest-light); transform:translateY(-1px); box-shadow:var(--shadow-lg); }
 .btn-secondary { background:transparent; color:var(--forest); padding:14px 28px; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.95rem; border:2px solid var(--forest); transition:all 0.2s; }
 .btn-secondary:hover { background:var(--forest); color:white; }
-.crisis-ticker { background:var(--forest); color:white; padding:12px 5%; font-size:13px; display:flex; gap:3rem; overflow:hidden; }
-.ticker-item { display:flex; align-items:center; gap:8px; white-space:nowrap; }
-.ticker-dot { width:6px; height:6px; background:var(--gold-light); border-radius:50%; }
+.new-articles-bar { background:var(--forest); padding:10px 5%; display:flex; gap:1rem; flex-wrap:wrap; align-items:center; }
+.new-articles-label { color:var(--gold-light); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; white-space:nowrap; flex-shrink:0; }
+.new-article-link { color:rgba(255,255,255,0.85); font-size:12px; font-weight:500; text-decoration:none; display:flex; align-items:center; gap:6px; padding:4px 10px; border-radius:20px; border:1px solid rgba(255,255,255,0.2); transition:all 0.2s; white-space:nowrap; }
+.new-article-link:hover { background:rgba(255,255,255,0.1); color:white; border-color:rgba(255,255,255,0.4); }
 
 /* STATS */
 .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1px; background:var(--border); margin:0; }
@@ -100,11 +101,7 @@ nav { display:flex; justify-content:space-between; align-items:center; padding:1
 .badge-new { background:#D1FAE5; color:#065F46; }
 .badge-zero { background:#EDE9FE; color:#5B21B6; }
 .card-title { font-size:1rem; font-weight:700; margin-bottom:6px; line-height:1.4; }
-.card-title .hi { display:block; }
-.card-title .en { display:none; }
 .card-desc { font-size:0.85rem; color:var(--muted); line-height:1.6; }
-.card-desc .hi { display:block; }
-.card-desc .en { display:none; }
 .card-meta { display:flex; gap:8px; flex-wrap:wrap; margin-top:1rem; }
 .meta-chip { font-size:11px; padding:3px 8px; border-radius:6px; background:rgba(26,71,49,0.06); color:var(--forest); font-weight:500; }
 
@@ -193,10 +190,10 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
     <span class="logo-text">Smart<span>Bachao</span></span>
   </a>
   <ul class="nav-links">
-    <li><a href="energy.html" class="hi">ऊर्जा</a><a href="energy.html" class="en" style="display:none">Energy</a></li>
-    <li><a href="transport.html" class="hi">यातायात</a><a href="transport.html" class="en" style="display:none">Transport</a></li>
-    <li><a href="food.html" class="hi">खाना</a><a href="food.html" class="en" style="display:none">Food</a></li>
-    <li><a href="money.html" class="hi">पैसा</a><a href="money.html" class="en" style="display:none">Money</a></li>
+    <li><a href="bijli-bill-kam-kare.html" class="hi">ऊर्जा</a><a href="bijli-bill-kam-kare.html" class="en" style="display:none">Energy</a></li>
+    <li><a href="cycle-buying-guide-india.html" class="hi">यातायात</a><a href="cycle-buying-guide-india.html" class="en" style="display:none">Transport</a></li>
+    <li><a href="ghar-mein-sabzi-kaise-ugaye.html" class="hi">खाना</a><a href="ghar-mein-sabzi-kaise-ugaye.html" class="en" style="display:none">Food</a></li>
+    <li><a href="mehngai-mein-paise-bachao.html" class="hi">पैसा</a><a href="mehngai-mein-paise-bachao.html" class="en" style="display:none">Money</a></li>
     <li><a href="calculators.html" class="hi">कैलकुलेटर</a><a href="calculators.html" class="en" style="display:none">Calculators</a></li>
   </ul>
   <a href="calculators.html" class="nav-cta hi">फ्री कैलकुलेटर →</a>
@@ -204,10 +201,20 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
 </nav>
 
 <!-- CRISIS TICKER -->
-<div class="crisis-ticker">
-  <div class="ticker-item"><div class="ticker-dot"></div><span class="hi">LPG ₹913 दिल्ली में — इंडक्शन की मांग 30 गुना बढ़ी</span><span class="en" style="display:none">LPG ₹913 in Delhi — Induction demand up 30x</span></div>
-  <div class="ticker-item"><div class="ticker-dot"></div><span class="hi">पेट्रोल ₹100+ — साइकिल की बिक्री रिकॉर्ड ऊंचाई पर</span><span class="en" style="display:none">Petrol ₹100+ — Bicycle sales hit record high</span></div>
-  <div class="ticker-item"><div class="ticker-dot"></div><span class="hi">PM सूर्य घर — 2.4 करोड़ घरों को मुफ्त बिजली</span><span class="en" style="display:none">PM Surya Ghar — Free electricity for 2.4 crore homes</span></div>
+<div class="new-articles-bar">
+  <span class="new-articles-label">🆕 New</span>
+  <a href="lpg-crisis-india-2026.html" class="new-article-link">
+    <span class="hi">🔴 LPG Crisis 2026 — क्या करें?</span>
+    <span class="en" style="display:none">🔴 LPG Crisis 2026 — What to Do</span>
+  </a>
+  <a href="modi-fuel-conservation-tips.html" class="new-article-link">
+    <span class="hi">🇮🇳 Modi जी के Fuel Tips</span>
+    <span class="en" style="display:none">🇮🇳 Modi's Fuel Conservation Tips</span>
+  </a>
+  <a href="iran-war-india-economy-impact.html" class="new-article-link">
+    <span class="hi">🌍 Iran War — India पर असर</span>
+    <span class="en" style="display:none">🌍 Iran War — Impact on India</span>
+  </a>
 </div>
 
 <!-- HERO -->
@@ -223,8 +230,8 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
   <p class="hero-sub hi">LPG महंगी, पेट्रोल महंगा, बिजली बिल बढ़ रहा है — SmartBachao पर हर समस्या का सरल, सस्ता और असली हल मिलेगा। हिंदी में, आपकी भाषा में।</p>
   <p class="hero-sub en" style="display:none">LPG prices up, petrol expensive, electricity bills rising — SmartBachao gives you real, practical, affordable solutions for every crisis. In Hindi and English, for every Indian.</p>
   <div class="hero-btns">
-    <a href="energy.html" class="btn-primary hi">⚡ ऊर्जा समाधान देखें</a>
-    <a href="energy.html" class="btn-primary en" style="display:none">⚡ See Energy Solutions</a>
+    <a href="bijli-bill-kam-kare.html" class="btn-primary hi">⚡ ऊर्जा समाधान देखें</a>
+    <a href="bijli-bill-kam-kare.html" class="btn-primary en" style="display:none">⚡ See Energy Solutions</a>
     <a href="calculators.html" class="btn-secondary hi">🧮 बचत कैलकुलेटर</a>
     <a href="calculators.html" class="btn-secondary en" style="display:none">🧮 Savings Calculator</a>
   </div>
@@ -245,8 +252,8 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
     <div class="section-tag en" style="display:none">⚡ Energy Crisis</div>
     <h2 class="section-title hi">LPG, बिजली और गैस — असली हल</h2>
     <h2 class="section-title en" style="display:none">LPG, Electricity & Gas — Real Solutions</h2>
-    <p class="section-sub hi">गैस सिलेंडर ₹913 हो गया। इंडक्शन, PNG कनेक्शन, सोलर — सब कुछ यहाँ समझें।</p>
-    <p class="section-sub en" style="display:none">LPG cylinder at ₹913. Understand induction, PNG connection, solar — everything explained simply.</p>
+    <p class="section-sub hi">जब गैस महंगी हो जाए — इंडक्शन, PNG कनेक्शन, सोलर — सब कुछ यहाँ समझें।</p>
+    <p class="section-sub en" style="display:none">When gas gets expensive — induction, PNG connection, solar — everything explained simply.</p>
   </div>
   <div class="cards">
     <a href="png-connection-guide.html" class="card">
@@ -306,8 +313,8 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
     <a href="cycle-buying-guide-india.html" class="card">
       <div class="card-icon">🚲</div>
       <div class="card-title"><span class="hi">साइकिल खरीदो अभी — कीमत बढ़ने से पहले</span><span class="en">Buy Cycle Now — Before Prices Rise</span></div>
-      <div class="card-desc"><span class="hi">पेट्रोल ₹100+ हो गया। साइकिल की मांग रिकॉर्ड ऊंचाई पर। दाम बढ़ने से पहले कौन सी साइकिल खरीदें?</span><span class="en">Petrol at ₹100+. Cycle demand at record high. Which cycle to buy before prices spike?</span></div>
-      <div class="card-meta"><span class="meta-chip">Hero / Atlas / Firefox</span></div>
+      <div class="card-desc"><span class="hi">पेट्रोल महंगा हो तो साइकिल एक smart investment है। Hero, Atlas, Firefox — कौन सी लें?</span><span class="en">When petrol gets expensive, a cycle is a smart investment. Hero, Atlas, Firefox — which one?</span></div>
+      <div class="card-meta"><span class="meta-chip hi">🚲 खरीद गाइड</span><span class="meta-chip en" style="display:none">🚲 Buying Guide</span></div>
     </a>
     <a href="electric-scooter-vs-petrol.html" class="card">
       <div class="card-icon">⚡</div>
@@ -325,7 +332,7 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
       <div class="card-icon">🔋</div>
       <div class="card-title"><span class="hi">ई-साइकिल vs साधारण साइकिल — कौन सी लें?</span><span class="en">E-Cycle vs Regular Cycle — Which to Buy?</span></div>
       <div class="card-desc"><span class="hi">ई-साइकिल ₹25,000–₹60,000 की। क्या यह साधारण साइकिल से बेहतर है? इस्तेमाल और बचत का सच।</span><span class="en">E-cycles cost ₹25,000–₹60,000. Is it better than a regular cycle? Real usage and savings truth.</span></div>
-      <div class="card-meta"><span class="meta-chip">120K+ searches</span></div>
+      <div class="card-meta"><span class="meta-chip hi">🔋 तुलना गाइड</span><span class="meta-chip en" style="display:none">🔋 Comparison</span></div>
     </a>
   </div>
 </section>
@@ -357,7 +364,7 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
       <div class="card-icon">🌱</div>
       <div class="card-title"><span class="hi">नैनो यूरिया क्या है — किसानों के लिए गाइड</span><span class="en">What is Nano Urea — Complete Guide for Farmers</span></div>
       <div class="card-desc"><span class="hi">खाद संकट में सरकार कह रही है नैनो यूरिया इस्तेमाल करो। यह क्या है? कैसे काम करता है?</span><span class="en">During fertilizer crisis, govt pushing nano urea. What is it? How does it work?</span></div>
-      <div class="card-meta"><span class="meta-chip">250K+ searches</span><span class="meta-chip hi">किसान गाइड</span><span class="meta-chip en" style="display:none">Farmers guide</span></div>
+      <div class="card-meta"><span class="meta-chip hi">🌱 किसान गाइड</span><span class="meta-chip en" style="display:none">🌱 Farmers Guide</span></div>
     </a>
     <a href="cheap-protein-india.html" class="card">
       <div class="card-icon">💪</div>
@@ -395,13 +402,13 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
       <div class="card-icon">📉</div>
       <div class="card-title"><span class="hi">रुपया गिरने से आम आदमी पर क्या असर?</span><span class="en">How Does Rupee Falling Affect Common People?</span></div>
       <div class="card-desc"><span class="hi">डॉलर के मुकाबले रुपया ₹84+ पर। इसका आपकी रोजमर्रा की जिंदगी पर क्या असर? सरल भाषा में।</span><span class="en">Rupee at ₹84+ vs dollar. What does this mean for your daily life? Explained simply.</span></div>
-      <div class="card-meta"><span class="meta-chip">Finance category</span><span class="meta-chip hi">उच्च RPM</span><span class="meta-chip en" style="display:none">High RPM</span></div>
+      <div class="card-meta"><span class="meta-chip hi">📉 रुपया गाइड</span><span class="meta-chip en" style="display:none">📉 Rupee Guide</span></div>
     </a>
     <a href="gold-vs-fd-vs-stocks-inflation.html" class="card">
       <div class="card-icon">🥇</div>
       <div class="card-title"><span class="hi">सोना vs FD vs शेयर — महंगाई में क्या बेहतर?</span><span class="en">Gold vs FD vs Stocks — What's Better During Inflation?</span></div>
       <div class="card-desc"><span class="hi">महंगाई में पैसा कहाँ लगाएं? सोना, FD, म्यूचुअल फंड या शेयर — किसमें सबसे ज्यादा फायदा?</span><span class="en">Where to invest during inflation? Gold, FD, Mutual Funds or Stocks — which gives best returns?</span></div>
-      <div class="card-meta"><span class="meta-chip">Groww Affiliate</span><span class="meta-chip">₹500/signup</span></div>
+      <div class="card-meta"><span class="meta-chip hi">🥇 निवेश गाइड</span><span class="meta-chip en" style="display:none">🥇 Investment Guide</span></div>
     </a>
   </div>
 </section>
@@ -425,8 +432,8 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
           <span class="en">How to Get PNG Connection? — Complete Process for Delhi, Mumbai, Hyderabad</span>
         </div>
         <div class="featured-desc">
-          <span class="hi">LPG सिलेंडर की किल्लत और ₹913 का दाम — अब समय आ गया है PNG पाइप्ड गैस लगवाने का। यहाँ जानें कि IGL, MGL और अन्य कंपनियों से कनेक्शन कैसे लें — क्या दस्तावेज चाहिए, कितना खर्च, कितना समय।</span>
-          <span class="en">LPG shortage and ₹913 price — time to get PNG piped gas. Learn how to apply with IGL, MGL and other companies — documents needed, cost, and timeline.</span>
+          <span class="hi">जब LPG महंगी हो और मिलना मुश्किल हो — PNG एक smart विकल्प है। IGL, MGL से कनेक्शन कैसे लें, documents, cost, timeline — सब यहाँ।</span>
+          <span class="en">When LPG gets expensive — PNG is a smarter option. How to apply with IGL, MGL, documents needed, cost, timeline — all here.</span>
         </div>
       </div>
     </a>
@@ -442,7 +449,7 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
         <div class="side-icon">☀️</div>
         <div>
           <div class="side-title"><span class="hi">PM सूर्य घर — 60% सब्सिडी पर सोलर पैनल</span><span class="en">PM Surya Ghar — Solar Panels at 60% Subsidy</span></div>
-          <div class="side-meta en" style="display:none">500K+ searches • Govt Scheme</div>
+          <div class="side-meta en" style="display:none">☀️ Government Scheme</div>
         </div>
       </a>
       <a href="cycle-buying-guide-india.html" class="side-card">
@@ -561,14 +568,19 @@ function detectLang() {
 function setLang(lang) {
   localStorage.setItem('sb-lang', lang);
   document.documentElement.lang = lang;
-  // Toggle all .hi and .en elements
-  document.querySelectorAll('.hi').forEach(el => {
-    el.style.display = lang === 'hi' ? '' : 'none';
-  });
-  document.querySelectorAll('.en').forEach(el => {
-    el.style.display = lang === 'en' ? '' : 'none';
-  });
-  // Update active button
+  
+  if (lang === 'hi') {
+    document.querySelectorAll('.hi').forEach(el => {
+      el.style.display = (el.tagName === 'SPAN' || el.tagName === 'A') ? 'inline' : 'block';
+    });
+    document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+  } else {
+    document.querySelectorAll('.hi').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.en').forEach(el => {
+      el.style.display = (el.tagName === 'SPAN' || el.tagName === 'A') ? 'inline' : 'block';
+    });
+  }
+  
   document.getElementById('btn-hi').classList.toggle('active', lang === 'hi');
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
 }
