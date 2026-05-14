@@ -73,6 +73,34 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 .source-link a{color:var(--forest);font-weight:600;text-decoration:none;}
 .source-link a:hover{text-decoration:underline;}
 .source-link span{color:var(--muted);}
+
+/* Info Grid */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin:1.2rem 0;}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;text-align:center;box-shadow:0 2px 8px rgba(26,71,49,0.06);}
+.info-icon{font-size:1.6rem;margin-bottom:6px;}
+.info-title{font-size:0.85rem;font-weight:600;margin-bottom:4px;color:var(--forest);display:block;}
+.info-desc{font-size:0.78rem;color:var(--muted);line-height:1.5;display:block;}
+
+/* Compare Table */
+.compare-table{width:100%;border-collapse:collapse;margin:1.2rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+.compare-table th{background:var(--forest);color:white;padding:11px 14px;text-align:left;font-size:0.85rem;font-weight:600;}
+.compare-table td{padding:10px 14px;border-bottom:1px solid var(--border);font-size:0.85rem;color:var(--ink-mid);vertical-align:top;}
+.compare-table tr:nth-child(even) td{background:var(--warm);}
+.compare-table tr:last-child td{border-bottom:none;}
+
+/* Related Cards */
+.related{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-top:1.5rem;}
+.rel-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.1rem;text-decoration:none;color:var(--ink);transition:all 0.2s;display:block;}
+.rel-card:hover{border-color:var(--forest);box-shadow:0 4px 12px rgba(26,71,49,0.08);transform:translateY(-1px);}
+.rel-icon{font-size:1.4rem;margin-bottom:6px;}
+.rel-title{font-size:0.85rem;font-weight:600;line-height:1.4;color:var(--ink);display:block;}
+
+/* Steps */
+.steps{display:flex;flex-direction:column;gap:0.9rem;margin:1.2rem 0;}
+.step{background:var(--card);border-radius:12px;padding:1.2rem 1.4rem;border:1px solid var(--border);display:flex;gap:1rem;align-items:flex-start;}
+.step-num{background:var(--forest);color:white;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;font-weight:700;flex-shrink:0;}
+.step-title{font-size:0.95rem;font-weight:700;margin-bottom:4px;color:var(--ink);display:block;}
+.step-desc{font-size:0.85rem;color:var(--muted);line-height:1.7;display:block;}
 </style></style><link rel="alternate" hreflang="hi" href="https://smartbachao.com/gold-vs-fd-vs-stocks-inflation.html"/>
 <link rel="alternate" hreflang="en" href="https://smartbachao.com/gold-vs-fd-vs-stocks-inflation.html"/>
 <link rel="alternate" hreflang="x-default" href="https://smartbachao.com/gold-vs-fd-vs-stocks-inflation.html"/>
@@ -107,9 +135,9 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 <h2 class="hi">हर Option को समझें</h2>
 <h2 class="en" style="display:none">Understanding Each Option</h2>
 <div class="steps">
-<div class="step"><div class="step-num">🥇</div><div><div class="step-title hi">Gold — Traditional Inflation Hedge</div><div class="step-title en" style="display:none">Gold — Traditional Inflation Hedge</div><div class="step-desc hi">Gold historically inflation के साथ बढ़ता है। जब currency weak हो तो gold की demand बढ़ती है। Digital gold, Sovereign Gold Bonds, या physical gold — तीनों options हैं। SGBs पर additional interest भी मिलता है। लेकिन short term में volatile हो सकता है।</div><div class="step-desc en" style="display:none">Gold historically rises with inflation. When currency weakens, demand for gold increases. Options include digital gold, Sovereign Gold Bonds, or physical gold. SGBs also provide additional interest. However, gold can be volatile in the short term.</div></div></div>
-<div class="step"><div class="step-num">🏦</div><div><div class="step-title hi">FD — Safe but Watch the Rate</div><div class="step-title en" style="display:none">FD — Safe but Watch the Rate</div><div class="step-desc hi">FD guaranteed return देता है। लेकिन अगर inflation rate FD interest rate से ज्यादा है, तो real returns negative हो जाते हैं। उदाहरण: FD 7% return दे और inflation 8% हो — तो real return -1%। Emergency fund के लिए FD अच्छा है।</div><div class="step-desc en" style="display:none">FD gives guaranteed returns. But if inflation exceeds FD interest rate, real returns turn negative. Example: 7% FD return with 8% inflation means -1% real return. FD is good for emergency funds.</div></div></div>
-<div class="step"><div class="step-num">📈</div><div><div class="step-title hi">Equity Mutual Funds — Long Term Winner</div><div class="step-title en" style="display:none">Equity Mutual Funds — Long Term Winner</div><div class="step-desc hi">Long term (5-10 years) में equity mutual funds inflation को beat करते हैं historically। Short term में market volatile होता है। SIP के जरिए छोटी amounts से invest करना शुरू करें। Inflation में SIP बंद करने की गलती न करें।</div><div class="step-desc en" style="display:none">Historically, equity mutual funds beat inflation over the long term (5-10 years). Markets are volatile short-term. Start investing small amounts via SIP. Don't make the mistake of stopping SIP during inflation.</div></div></div>
+<div class="step"><div class="step-num">🥇</div><div><div class="step-title">Gold — Traditional Inflation Hedge</div><div class="step-title en" style="display:none">Gold — Traditional Inflation Hedge</div><div class="step-desc">Gold historically inflation के साथ बढ़ता है। जब currency weak हो तो gold की demand बढ़ती है। Digital gold, Sovereign Gold Bonds, या physical gold — तीनों options हैं। SGBs पर additional interest भी मिलता है। लेकिन short term में volatile हो सकता है।</div><div class="step-desc en" style="display:none">Gold historically rises with inflation. When currency weakens, demand for gold increases. Options include digital gold, Sovereign Gold Bonds, or physical gold. SGBs also provide additional interest. However, gold can be volatile in the short term.</div></div></div>
+<div class="step"><div class="step-num">🏦</div><div><div class="step-title">FD — Safe but Watch the Rate</div><div class="step-title en" style="display:none">FD — Safe but Watch the Rate</div><div class="step-desc">FD guaranteed return देता है। लेकिन अगर inflation rate FD interest rate से ज्यादा है, तो real returns negative हो जाते हैं। उदाहरण: FD 7% return दे और inflation 8% हो — तो real return -1%। Emergency fund के लिए FD अच्छा है।</div><div class="step-desc en" style="display:none">FD gives guaranteed returns. But if inflation exceeds FD interest rate, real returns turn negative. Example: 7% FD return with 8% inflation means -1% real return. FD is good for emergency funds.</div></div></div>
+<div class="step"><div class="step-num">📈</div><div><div class="step-title">Equity Mutual Funds — Long Term Winner</div><div class="step-title en" style="display:none">Equity Mutual Funds — Long Term Winner</div><div class="step-desc">Long term (5-10 years) में equity mutual funds inflation को beat करते हैं historically। Short term में market volatile होता है। SIP के जरिए छोटी amounts से invest करना शुरू करें। Inflation में SIP बंद करने की गलती न करें।</div><div class="step-desc en" style="display:none">Historically, equity mutual funds beat inflation over the long term (5-10 years). Markets are volatile short-term. Start investing small amounts via SIP. Don't make the mistake of stopping SIP during inflation.</div></div></div>
 </div>
 
 <div class="tip-box"><p class="hi"><strong>SmartBachao Approach:</strong> एक balanced approach — Emergency fund FD में, कुछ Gold में (Sovereign Gold Bonds), और long-term wealth के लिए Equity MF में SIP। Diversification सबसे smart strategy है। लेकिन exact allocation के लिए financial advisor से मिलें।</p>
@@ -143,10 +171,71 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 </div>
 </div>
 </div>
+
+<h2 class="hi">तीनों का Detailed Comparison — 2026</h2>
+<h2 class="en" style="display:none">Detailed Comparison of All Three — 2026</h2>
+<table class="comparison">
+<tr><th>Factor</th><th class="hi">सोना (Gold)</th><th class="en" style="display:none">Gold</th><th>FD</th><th class="hi">Equity Mutual Fund</th><th class="en" style="display:none">Equity Mutual Fund</th></tr>
+<tr><td class="hi">Expected return</td><td class="en" style="display:none">Expected return</td><td>8-12% (long term)</td><td>6-7.5%</td><td>10-15% (long term)</td></tr>
+<tr><td class="hi">Risk</td><td class="en" style="display:none">Risk</td><td class="hi">Medium</td><td class="en" style="display:none">Medium</td><td class="hi">Low</td><td class="en" style="display:none">Low</td><td class="hi">High (short term)</td><td class="en" style="display:none">High (short term)</td></tr>
+<tr><td class="hi">Liquidity</td><td class="en" style="display:none">Liquidity</td><td class="hi">High</td><td class="en" style="display:none">High</td><td class="hi">Medium (premature penalty)</td><td class="en" style="display:none">Medium (premature penalty)</td><td class="hi">High (T+2 days)</td><td class="en" style="display:none">High (T+2 days)</td></tr>
+<tr><td class="hi">Tax (3 साल बाद)</td><td class="en" style="display:none">Tax (after 3 years)</td><td class="hi">20% with indexation</td><td class="en" style="display:none">20% with indexation</td><td class="hi">Interest = income tax slab</td><td class="en" style="display:none">Interest = income tax slab</td><td class="hi">10% LTCG (above ₹1L)</td><td class="en" style="display:none">10% LTCG (above ₹1L)</td></tr>
+<tr><td class="hi">Inflation protection</td><td class="en" style="display:none">Inflation protection</td><td class="hi">✅ Excellent</td><td class="en" style="display:none">✅ Excellent</td><td class="hi">⚠️ Barely beats inflation</td><td class="en" style="display:none">⚠️ Barely beats inflation</td><td class="hi">✅ Strong long-term</td><td class="en" style="display:none">✅ Strong long-term</td></tr>
+<tr><td class="hi">Minimum amount</td><td class="en" style="display:none">Minimum amount</td><td class="hi">1gm digital gold (~₹7,000-8,000)</td><td class="en" style="display:none">1gm digital gold (~₹7,000-8,000)</td><td class="hi">₹1,000</td><td class="en" style="display:none">₹1,000</td><td class="hi">₹500 (SIP)</td><td class="en" style="display:none">₹500 (SIP)</td></tr>
+</table>
+<p style="font-size:0.8rem;color:var(--muted);font-style:italic;" class="hi">नोट: Returns historical averages हैं — future returns guarantee नहीं किए जा सकते। यह educational information है — financial advice नहीं।</p>
+<p style="font-size:0.8rem;color:var(--muted);font-style:italic;" class="en" style="display:none">Note: Returns are historical averages — future returns cannot be guaranteed. This is educational information — not financial advice.</p>
+
+<h2 class="hi">महंगाई में सबसे Smart Strategy क्या है?</h2>
+<h2 class="en" style="display:none">What is the Smartest Strategy During Inflation?</h2>
+<p class="hi">एक ही option में सब कुछ डालना risky है। Smart investors diversify करते हैं।</p>
+<p class="en" style="display:none">Putting everything in one option is risky. Smart investors diversify.</p>
+<div class="info-grid">
+  <div class="info-card"><div class="info-icon">🥇</div><div class="info-title hi">Conservative (Safe) Strategy</div><div class="info-desc hi">60% FD + 20% Gold + 20% Liquid MF। Risk कम, return modest। Senior citizens और risk-averse लोगों के लिए</div><div class="info-desc en" style="display:none">60% FD + 20% Gold + 20% Liquid MF. Less risk, modest return. For senior citizens and risk-averse people</div></div>
+  <div class="info-card"><div class="info-icon">⚖️</div><div class="info-title hi">Balanced Strategy</div><div class="info-desc hi">40% Equity MF + 30% FD + 30% Gold। Inflation beat करेगी long term में। Middle-aged investors के लिए</div><div class="info-desc en" style="display:none">40% Equity MF + 30% FD + 30% Gold. Will beat inflation long-term. For middle-aged investors</div></div>
+  <div class="info-card"><div class="info-icon">🚀</div><div class="info-title hi">Growth Strategy</div><div class="info-desc hi">70% Equity MF + 15% Gold + 15% FD। High return potential, higher risk। Young investors, long time horizon</div><div class="info-desc en" style="display:none">70% Equity MF + 15% Gold + 15% FD. High return potential, higher risk. For young investors with long time horizon</div></div>
+</div>
+
+<h2 class="hi">Gold कैसे खरीदें — Smart तरीका</h2>
+<h2 class="en" style="display:none">How to Buy Gold — The Smart Way</h2>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div>
+    <div class="step-title hi">Sovereign Gold Bond (SGB) — Best Option</div>
+    <div class="step-title en" style="display:none">Sovereign Gold Bond (SGB) — Best Option</div>
+    <div class="step-desc hi">RBI issue करती है। Gold price के साथ-साथ 2.5% annual interest भी मिलती है। Tax-free maturity (8 साल बाद)। Physical gold से much better। Bank या Zerodha/Groww से खरीद सकते हैं।</div>
+    <div class="step-desc en" style="display:none">Issued by RBI. Get 2.5% annual interest on top of gold price appreciation. Tax-free at maturity (after 8 years). Much better than physical gold. Can buy from bank or Zerodha/Groww.</div>
+  </div></div>
+  <div class="step"><div class="step-num">2</div><div>
+    <div class="step-title hi">Digital Gold — Flexibility के लिए</div>
+    <div class="step-title en" style="display:none">Digital Gold — For Flexibility</div>
+    <div class="step-desc hi">PhonePe, Paytm, Google Pay पर 24-carat digital gold। 1 rupee से शुरू करें। No storage worry, no making charges। SGB से थोड़ा less tax efficient लेकिन more flexible।</div>
+    <div class="step-desc en" style="display:none">24-carat digital gold on PhonePe, Paytm, Google Pay. Start from ₹1. No storage worry, no making charges. Slightly less tax-efficient than SGB but more flexible.</div>
+  </div></div>
+  <div class="step"><div class="step-num">3</div><div>
+    <div class="step-title hi">Physical Gold — Last Resort</div>
+    <div class="step-title en" style="display:none">Physical Gold — Last Resort</div>
+    <div class="step-desc hi">Making charges (10-25%) direct loss है। Storage और safety risk है। Only BIS Hallmark gold लें। Emotional value के लिए ठीक है — investment के लिए SGB better है।</div>
+    <div class="step-desc en" style="display:none">Making charges (10-25%) are a direct loss. Storage and safety risk. Only buy BIS Hallmark gold. Fine for emotional value — for investment, SGB is better.</div>
+  </div></div>
+</div>
+
+<div class="tip-box"><p class="hi"><strong>SmartBachao की बात:</strong> महंगाई में cash रखना सबसे बुरा option है। ₹1,000 का savings account में रखा पैसा next year actually ₹940-950 जितना ही होगा (inflation adjust करके)। FD भी barely inflation beat करती है। इसलिए कुछ हिस्सा equity में जरूर रखें — long term wealth के लिए।</p>
+<p class="en" style="display:none"><strong>SmartBachao's take:</strong> During inflation, keeping cash is the worst option. ₹1,000 kept in a savings account will effectively be worth only ₹940-950 next year (after inflation adjustment). FD barely beats inflation too. So definitely keep some portion in equity — for long-term wealth.</p></div>
+
+<div class="faq">
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span class="hi">FD safe है या नहीं?</span><span class="en" style="display:none">Is FD safe?</span><span>+</span></div>
+    <div class="faq-a"><p class="hi">हाँ — DICGC (Deposit Insurance) के तहत scheduled banks में ₹5 lakh तक guaranteed है। यानी bank डूब भी जाए तो ₹5 lakh मिलेंगे। इससे ज्यादा amount के लिए multiple banks में रखें। Safety के लिए FD excellent है — लेकिन real returns inflation के बाद कम हो जाती हैं।</p><p class="en" style="display:none">Yes — under DICGC (Deposit Insurance), up to ₹5 lakh is guaranteed in scheduled banks. So even if the bank fails, you'll get ₹5 lakh. For amounts above this, spread across multiple banks. FD is excellent for safety — but real returns are reduced after inflation.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span class="hi">Mutual Fund में पैसा डूब सकता है?</span><span class="en" style="display:none">Can money be lost in mutual funds?</span><span>+</span></div>
+    <div class="faq-a"><p class="hi">Short term में हाँ — market down हो तो NAV कम होती है। लेकिन historically Nifty50 ने 10+ साल में कभी negative return नहीं दिया है। लंबे समय (7-10 साल) के लिए equity mutual funds में लगाना historically safe रहा है। Start करें ₹500/month SIP से।</p><p class="en" style="display:none">In the short term yes — when market goes down, NAV decreases. But historically Nifty50 has never given negative returns over 10+ years. Investing in equity mutual funds for long periods (7-10 years) has historically been safe. Start with ₹500/month SIP.</p></div>
+  </div>
+</div>
 <div class="related">
-<a href="mehngai-mein-paise-bachao.html" class="rel-card"><div class="rel-icon">💰</div><div class="rel-title hi">Savings Guide</div></a>
-<a href="calculators.html" class="rel-card"><div class="rel-icon">🧮</div><div class="rel-title hi">Calculators</div></a>
-<a href="bijli-bill-kam-kare.html" class="rel-card"><div class="rel-icon">💡</div><div class="rel-title hi">Bijli Guide</div></a>
+<a href="mehngai-mein-paise-bachao.html" class="rel-card"><div class="rel-icon">💰</div><div class="rel-title">Savings Guide</div></a>
+<a href="calculators.html" class="rel-card"><div class="rel-icon">🧮</div><div class="rel-title">Calculators</div></a>
+<a href="bijli-bill-kam-kare.html" class="rel-card"><div class="rel-icon">💡</div><div class="rel-title">Bijli Guide</div></a>
 <a href="png-connection-guide.html" class="rel-card"><div class="rel-icon">🔗</div><div class="rel-title">PNG Guide</div></a>
 </div></div>
 <footer><p><a href="index.html">SmartBachao</a> · <a href="calculators.html" class="hi">कैलकुलेटर</a><a href="calculators.html" class="en" style="display:none">Calculators</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="contact.html">Contact</a></p>

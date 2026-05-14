@@ -63,6 +63,34 @@ p strong{color:var(--ink);}
 .rel-title{font-size:0.9rem;font-weight:600;line-height:1.4;}
 footer{background:var(--forest);color:rgba(255,255,255,0.6);text-align:center;padding:2rem 5%;font-size:0.85rem;margin-top:3rem;}
 footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
+
+/* Info Grid */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin:1.2rem 0;}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;text-align:center;box-shadow:0 2px 8px rgba(26,71,49,0.06);}
+.info-icon{font-size:1.6rem;margin-bottom:6px;}
+.info-title{font-size:0.85rem;font-weight:600;margin-bottom:4px;color:var(--forest);display:block;}
+.info-desc{font-size:0.78rem;color:var(--muted);line-height:1.5;display:block;}
+
+/* Compare Table */
+.compare-table{width:100%;border-collapse:collapse;margin:1.2rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+.compare-table th{background:var(--forest);color:white;padding:11px 14px;text-align:left;font-size:0.85rem;font-weight:600;}
+.compare-table td{padding:10px 14px;border-bottom:1px solid var(--border);font-size:0.85rem;color:var(--ink-mid);vertical-align:top;}
+.compare-table tr:nth-child(even) td{background:var(--warm);}
+.compare-table tr:last-child td{border-bottom:none;}
+
+/* Related Cards */
+.related{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-top:1.5rem;}
+.rel-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.1rem;text-decoration:none;color:var(--ink);transition:all 0.2s;display:block;}
+.rel-card:hover{border-color:var(--forest);box-shadow:0 4px 12px rgba(26,71,49,0.08);transform:translateY(-1px);}
+.rel-icon{font-size:1.4rem;margin-bottom:6px;}
+.rel-title{font-size:0.85rem;font-weight:600;line-height:1.4;color:var(--ink);display:block;}
+
+/* Steps */
+.steps{display:flex;flex-direction:column;gap:0.9rem;margin:1.2rem 0;}
+.step{background:var(--card);border-radius:12px;padding:1.2rem 1.4rem;border:1px solid var(--border);display:flex;gap:1rem;align-items:flex-start;}
+.step-num{background:var(--forest);color:white;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;font-weight:700;flex-shrink:0;}
+.step-title{font-size:0.95rem;font-weight:700;margin-bottom:4px;color:var(--ink);display:block;}
+.step-desc{font-size:0.85rem;color:var(--muted);line-height:1.7;display:block;}
 </style><link rel="alternate" hreflang="hi" href="https://smartbachao.com/budget-meal-plan-india.html"/>
 <link rel="alternate" hreflang="en" href="https://smartbachao.com/budget-meal-plan-india.html"/>
 <link rel="alternate" hreflang="x-default" href="https://smartbachao.com/budget-meal-plan-india.html"/>
@@ -87,11 +115,11 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 <h2 class="hi">5 Smart Shopping Rules</h2>
 <h2 class="en" style="display:none">5 Smart Shopping Rules</h2>
 <div class="steps">
-<div class="step"><div class="step-num">1</div><div><div class="step-title hi">Seasonal सब्जियाँ खरीदें</div><div class="step-title en" style="display:none">Buy seasonal vegetables</div><div class="step-desc hi">मौसम की सब्जी सबसे सस्ती और ताजी होती है। सर्दियों में पालक-मेथी-गोभी, गर्मियों में तोरी-करेला सस्ते मिलते हैं।</div><div class="step-desc en" style="display:none">Seasonal vegetables are always cheapest and freshest. Adjust your cooking based on what's in season.</div></div></div>
-<div class="step"><div class="step-num">2</div><div><div class="step-title hi">दाल को आधार बनाएं</div><div class="step-title en" style="display:none">Make dal the foundation</div><div class="step-desc hi">दाल सबसे सस्ता protein है। मसूर, मूंग, चना — affordable और extremely nutritious। दाल-चावल और दाल-रोटी को base बनाएं।</div><div class="step-desc en" style="display:none">Dal is the cheapest protein available. Masoor, moong, chana — affordable and extremely nutritious. Build meals around dal.</div></div></div>
-<div class="step"><div class="step-num">3</div><div><div class="step-title hi">Bulk में staples खरीदें</div><div class="step-title en" style="display:none">Buy staples in bulk</div><div class="step-desc hi">चावल, दाल, आटा bulk में खरीदने पर per kg सस्ते पड़ते हैं। एक बार invest करो, हफ्तों तक benefit।</div><div class="step-desc en" style="display:none">Rice, dal, atta are cheaper per kg when bought in bulk. Invest once, benefit for weeks.</div></div></div>
-<div class="step"><div class="step-num">4</div><div><div class="step-title hi">घर में उगाएं — जो हो सके</div><div class="step-title en" style="display:none">Grow what you can</div><div class="step-desc hi">धनिया, पुदीना, हरी मिर्च घर पर उगाना easy है। Daily cooking में इस्तेमाल होती हैं — हमारी home garden guide देखें।</div><div class="step-desc en" style="display:none">Coriander, mint, green chilli are easy to grow at home. Check our home garden guide.</div></div></div>
-<div class="step"><div class="step-num">5</div><div><div class="step-title hi">List बनाकर shopping करें</div><div class="step-title en" style="display:none">Always shop with a list</div><div class="step-desc hi">बिना list के shopping में 20-30% extra खर्च होता है। पहले menu बनाएं, फिर उसी का सामान लाएं।</div><div class="step-desc en" style="display:none">Shopping without a list leads to 20-30% overspending. Plan your menu first, then shop exactly for that.</div></div></div>
+<div class="step"><div class="step-num">1</div><div><div class="step-title">Seasonal सब्जियाँ खरीदें</div><div class="step-title en" style="display:none">Buy seasonal vegetables</div><div class="step-desc">मौसम की सब्जी सबसे सस्ती और ताजी होती है। सर्दियों में पालक-मेथी-गोभी, गर्मियों में तोरी-करेला सस्ते मिलते हैं।</div><div class="step-desc en" style="display:none">Seasonal vegetables are always cheapest and freshest. Adjust your cooking based on what's in season.</div></div></div>
+<div class="step"><div class="step-num">2</div><div><div class="step-title">दाल को आधार बनाएं</div><div class="step-title en" style="display:none">Make dal the foundation</div><div class="step-desc">दाल सबसे सस्ता protein है। मसूर, मूंग, चना — affordable और extremely nutritious। दाल-चावल और दाल-रोटी को base बनाएं।</div><div class="step-desc en" style="display:none">Dal is the cheapest protein available. Masoor, moong, chana — affordable and extremely nutritious. Build meals around dal.</div></div></div>
+<div class="step"><div class="step-num">3</div><div><div class="step-title">Bulk में staples खरीदें</div><div class="step-title en" style="display:none">Buy staples in bulk</div><div class="step-desc">चावल, दाल, आटा bulk में खरीदने पर per kg सस्ते पड़ते हैं। एक बार invest करो, हफ्तों तक benefit।</div><div class="step-desc en" style="display:none">Rice, dal, atta are cheaper per kg when bought in bulk. Invest once, benefit for weeks.</div></div></div>
+<div class="step"><div class="step-num">4</div><div><div class="step-title">घर में उगाएं — जो हो सके</div><div class="step-title en" style="display:none">Grow what you can</div><div class="step-desc">धनिया, पुदीना, हरी मिर्च घर पर उगाना easy है। Daily cooking में इस्तेमाल होती हैं — हमारी home garden guide देखें।</div><div class="step-desc en" style="display:none">Coriander, mint, green chilli are easy to grow at home. Check our home garden guide.</div></div></div>
+<div class="step"><div class="step-num">5</div><div><div class="step-title">List बनाकर shopping करें</div><div class="step-title en" style="display:none">Always shop with a list</div><div class="step-desc">बिना list के shopping में 20-30% extra खर्च होता है। पहले menu बनाएं, फिर उसी का सामान लाएं।</div><div class="step-desc en" style="display:none">Shopping without a list leads to 20-30% overspending. Plan your menu first, then shop exactly for that.</div></div></div>
 </div>
 <h2 class="hi">एक उदाहरण Weekly Grocery List</h2>
 <h2 class="en" style="display:none">Example Weekly Grocery List</h2>
@@ -120,10 +148,71 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 </div>
 </div>
 </div>
+
+<h2 class="hi">7-Day Meal Plan — उदाहरण के तौर पर</h2>
+<h2 class="en" style="display:none">7-Day Meal Plan — As an Example</h2>
+<table class="comparison">
+<tr><th class="hi">दिन</th><th class="en" style="display:none">Day</th><th class="hi">नाश्ता</th><th class="en" style="display:none">Breakfast</th><th class="hi">दोपहर</th><th class="en" style="display:none">Lunch</th><th class="hi">रात</th><th class="en" style="display:none">Dinner</th></tr>
+<tr><td>Monday</td><td class="hi">Poha</td><td class="en" style="display:none">Poha</td><td class="hi">Dal Chawal</td><td class="en" style="display:none">Dal Chawal</td><td class="hi">Roti + Sabzi</td><td class="en" style="display:none">Roti + Sabzi</td></tr>
+<tr><td>Tuesday</td><td class="hi">Bread + Egg</td><td class="en" style="display:none">Bread + Egg</td><td class="hi">Khichdi</td><td class="en" style="display:none">Khichdi</td><td class="hi">Dal + Roti</td><td class="en" style="display:none">Dal + Roti</td></tr>
+<tr><td>Wednesday</td><td class="hi">Upma</td><td class="en" style="display:none">Upma</td><td class="hi">Roti + Dal</td><td class="en" style="display:none">Roti + Dal</td><td class="hi">Chawal + Dahi</td><td class="en" style="display:none">Chawal + Dahi</td></tr>
+<tr><td>Thursday</td><td class="hi">Paratha</td><td class="en" style="display:none">Paratha</td><td class="hi">Chawal + Sabzi</td><td class="en" style="display:none">Chawal + Sabzi</td><td class="hi">Khichdi</td><td class="en" style="display:none">Khichdi</td></tr>
+<tr><td>Friday</td><td class="hi">Idli/Dosa</td><td class="en" style="display:none">Idli/Dosa</td><td class="hi">Dal Chawal</td><td class="en" style="display:none">Dal Chawal</td><td class="hi">Roti + Dahi</td><td class="en" style="display:none">Roti + Dahi</td></tr>
+<tr><td>Saturday</td><td class="hi">Poha/Upma</td><td class="en" style="display:none">Poha/Upma</td><td class="hi">Pulao</td><td class="en" style="display:none">Pulao</td><td class="hi">Dal Roti</td><td class="en" style="display:none">Dal Roti</td></tr>
+<tr><td>Sunday</td><td class="hi">Paratha + Tea</td><td class="en" style="display:none">Paratha + Tea</td><td class="hi">Special Meal</td><td class="en" style="display:none">Special Meal</td><td class="hi">Khichdi</td><td class="en" style="display:none">Khichdi</td></tr>
+</table>
+
+<h2 class="hi">Cheap + Healthy Protein Sources — Indian Kitchen</h2>
+<h2 class="en" style="display:none">Cheap + Healthy Protein Sources — Indian Kitchen</h2>
+<div class="info-grid">
+  <div class="info-card"><div class="info-icon">🫘</div><div class="info-title hi">दाल</div><div class="info-title en" style="display:none">Dal</div><div class="info-desc hi">Masoor, Moong, Chana — ₹80-120/kg। Protein richest food for the price। Daily dal = complete nutrition</div><div class="info-desc en" style="display:none">Masoor, Moong, Chana — ₹80-120/kg. Most protein-rich food for the price. Daily dal = complete nutrition</div></div>
+  <div class="info-card"><div class="info-icon">🥚</div><div class="info-title hi">अंडे</div><div class="info-title en" style="display:none">Eggs</div><div class="info-desc hi">₹6-8 प्रति अंडा। 6g protein प्रति अंडा। Cheapest complete protein। Boil, scramble, omelette</div><div class="info-desc en" style="display:none">₹6-8 per egg. 6g protein per egg. Cheapest complete protein. Boil, scramble, omelette</div></div>
+  <div class="info-card"><div class="info-icon">🥛</div><div class="info-title hi">दही</div><div class="info-title en" style="display:none">Curd</div><div class="info-desc hi">घर पर बनाएं — milk से। ₹20-25 में 500g। Probiotic + protein दोनों। Heat से protein नहीं जाता</div><div class="info-desc en" style="display:none">Make at home from milk. ₹20-25 for 500g. Both probiotic + protein. Protein doesn't diminish with heat</div></div>
+  <div class="info-card"><div class="info-icon">🌾</div><div class="info-title hi">Chana/Rajma</div><div class="info-title en" style="display:none">Chana/Rajma</div><div class="info-desc hi">₹60-100/kg। Soak overnight — cheap और filling। Chana chaat, rajma chawal — complete meal</div><div class="info-desc en" style="display:none">₹60-100/kg. Soak overnight — cheap and filling. Chana chaat, rajma chawal — complete meals</div></div>
+</div>
+
+<h2 class="hi">Kitchen Tips — Gas और Time दोनों बचाएं</h2>
+<h2 class="en" style="display:none">Kitchen Tips — Save Both Gas and Time</h2>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div>
+    <div class="step-title hi">Pressure Cooker में सब कुछ पकाएं</div>
+    <div class="step-title en" style="display:none">Cook Everything in Pressure Cooker</div>
+    <div class="step-desc hi">Dal, chawal, vegetables — pressure cooker में 50-70% कम gas लगती है। Normal cooking vs pressure cooker में huge difference है। One cooker में multiple dishes एक साथ भी हो सकती हैं।</div>
+    <div class="step-desc en" style="display:none">Dal, rice, vegetables — pressure cooker uses 50-70% less gas. Huge difference between normal cooking and pressure cooker. Multiple dishes can even be cooked together in one cooker.</div>
+  </div></div>
+  <div class="step"><div class="step-num">2</div><div>
+    <div class="step-title hi">Dal और Chana रात को भिगोएं</div>
+    <div class="step-title en" style="display:none">Soak Dal and Chana Overnight</div>
+    <div class="step-desc hi">Overnight soaking से cooking time 50% कम होती है — less gas। Nutrition भी बेहतर होता है। Chana तो soaked बिना बनता ही नहीं properly।</div>
+    <div class="step-desc en" style="display:none">Overnight soaking reduces cooking time by 50% — less gas. Nutrition is also better. Chana doesn't cook properly without soaking anyway.</div>
+  </div></div>
+  <div class="step"><div class="step-num">3</div><div>
+    <div class="step-title hi">Batch Cooking — Sunday को करें</div>
+    <div class="step-title en" style="display:none">Batch Cooking — Do it on Sunday</div>
+    <div class="step-desc hi">Sunday को 2-3 dishes batch cook करें। Dal का बड़ा batch, sabzi, rice — refrigerate करें। Weekday में सिर्फ heat करें। Time बचता है, gas बचती है, healthy खाना मिलता है।</div>
+    <div class="step-desc en" style="display:none">Batch cook 2-3 dishes on Sunday. Large batch of dal, sabzi, rice — refrigerate. Only heat on weekdays. Saves time, saves gas, ensures healthy food.</div>
+  </div></div>
+  <div class="step"><div class="step-num">4</div><div>
+    <div class="step-title hi">Seasonal और Local खरीदें</div>
+    <div class="step-title en" style="display:none">Buy Seasonal and Local</div>
+    <div class="step-desc hi">Seasonal vegetables 30-60% सस्ती होती हैं और nutrition भी बेहतर। Local mandi सुपरमार्केट से 30-50% सस्ता है। Weekly एक बार mandi जाएं — freshest और cheapest।</div>
+    <div class="step-desc en" style="display:none">Seasonal vegetables are 30-60% cheaper and more nutritious too. Local mandi is 30-50% cheaper than supermarkets. Visit mandi once a week — freshest and cheapest.</div>
+  </div></div>
+</div>
+
+<div class="tip-box"><p class="hi"><strong>SmartBachao Tip:</strong> "₹500 में हफ्ते का खाना" एक example है। आपके city और family size के हिसाब से amount अलग होगा। Important बात यह है कि dal-chawal-roti-dahi-sabzi base पर focus करें — यह combination India का most nutritious और most affordable meal है।</p>
+<p class="en" style="display:none"><strong>SmartBachao Tip:</strong> "Weekly food in ₹500" is an example. The amount will vary by your city and family size. The important thing is to focus on the dal-chawal-roti-dahi-sabzi base — this combination is India's most nutritious and most affordable meal.</p></div>
+
+<div class="faq">
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span class="hi">क्या budget खाने में nutrition मिलता है?</span><span class="en" style="display:none">Is budget food nutritious?</span><span>+</span></div>
+    <div class="faq-a"><p class="hi">हाँ — absolutely। India के traditional खाने का आधार ही budget-friendly और nutritious है। Dal-roti complete protein है। दही में probiotics और calcium। Sabziyon में vitamins। Seasonal fruits ₹20-50/piece में। आप ₹500-600/week में बहुत well-nourished रह सकते हैं।</p><p class="en" style="display:none">Yes — absolutely. The foundation of Indian traditional food is budget-friendly and nutritious. Dal-roti is complete protein. Curd has probiotics and calcium. Vegetables have vitamins. Seasonal fruits at ₹20-50 each. You can be very well-nourished at ₹500-600/week.</p></div>
+  </div>
+</div>
 <div class="related">
-<a href="ghar-mein-sabzi-kaise-ugaye.html" class="rel-card"><div class="rel-icon">🥬</div><div class="rel-title hi">Home Garden Guide</div></a>
+<a href="ghar-mein-sabzi-kaise-ugaye.html" class="rel-card"><div class="rel-icon">🥬</div><div class="rel-title">Home Garden Guide</div></a>
 <a href="best-induction-cooktop-india.html" class="rel-card"><div class="rel-icon">🍳</div><div class="rel-title">Induction Guide</div></a>
-<a href="mehngai-mein-paise-bachao.html" class="rel-card"><div class="rel-icon">💰</div><div class="rel-title hi">Savings Guide</div></a>
+<a href="mehngai-mein-paise-bachao.html" class="rel-card"><div class="rel-icon">💰</div><div class="rel-title">Savings Guide</div></a>
 <a href="png-connection-guide.html" class="rel-card"><div class="rel-icon">🔗</div><div class="rel-title">PNG Guide</div></a>
 </div></div>
 <footer><p><a href="index.html">SmartBachao</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="contact.html">Contact</a></p>

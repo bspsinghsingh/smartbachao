@@ -92,6 +92,34 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 .source-link a{color:var(--forest);font-weight:600;text-decoration:none;}
 .source-link a:hover{text-decoration:underline;}
 .source-link span{color:var(--muted);}
+
+/* Info Grid */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin:1.2rem 0;}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;text-align:center;box-shadow:0 2px 8px rgba(26,71,49,0.06);}
+.info-icon{font-size:1.6rem;margin-bottom:6px;}
+.info-title{font-size:0.85rem;font-weight:600;margin-bottom:4px;color:var(--forest);display:block;}
+.info-desc{font-size:0.78rem;color:var(--muted);line-height:1.5;display:block;}
+
+/* Compare Table */
+.compare-table{width:100%;border-collapse:collapse;margin:1.2rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+.compare-table th{background:var(--forest);color:white;padding:11px 14px;text-align:left;font-size:0.85rem;font-weight:600;}
+.compare-table td{padding:10px 14px;border-bottom:1px solid var(--border);font-size:0.85rem;color:var(--ink-mid);vertical-align:top;}
+.compare-table tr:nth-child(even) td{background:var(--warm);}
+.compare-table tr:last-child td{border-bottom:none;}
+
+/* Related Cards */
+.related{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-top:1.5rem;}
+.rel-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.1rem;text-decoration:none;color:var(--ink);transition:all 0.2s;display:block;}
+.rel-card:hover{border-color:var(--forest);box-shadow:0 4px 12px rgba(26,71,49,0.08);transform:translateY(-1px);}
+.rel-icon{font-size:1.4rem;margin-bottom:6px;}
+.rel-title{font-size:0.85rem;font-weight:600;line-height:1.4;color:var(--ink);display:block;}
+
+/* Steps */
+.steps{display:flex;flex-direction:column;gap:0.9rem;margin:1.2rem 0;}
+.step{background:var(--card);border-radius:12px;padding:1.2rem 1.4rem;border:1px solid var(--border);display:flex;gap:1rem;align-items:flex-start;}
+.step-num{background:var(--forest);color:white;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;font-weight:700;flex-shrink:0;}
+.step-title{font-size:0.95rem;font-weight:700;margin-bottom:4px;color:var(--ink);display:block;}
+.step-desc{font-size:0.85rem;color:var(--muted);line-height:1.7;display:block;}
 </style></style>
 <link rel="alternate" hreflang="hi" href="https://smartbachao.com/png-connection-guide.html"/>
 <link rel="alternate" hreflang="en" href="https://smartbachao.com/png-connection-guide.html"/>
@@ -167,12 +195,12 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
   <h2 id="how-to-apply" class="hi">PNG कनेक्शन कैसे लें — स्टेप बाय स्टेप</h2>
   <h2 id="how-to-apply" class="en" style="display:none">How to Get PNG Connection — Step by Step</h2>
   <div class="steps">
-    <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title hi">पहले चेक करें — आपके इलाके में PNG है या नहीं</div><div class="step-title en" style="display:none">First Check — Is PNG Available in Your Area?</div><div class="step-desc hi">अपनी गैस कंपनी की वेबसाइट पर जाएं (IGL, MGL, HPCL) और अपना पिनकोड डालकर चेक करें। अगर आपके इलाके में पाइपलाइन नहीं है, तो अप्लाई करने का कोई फायदा नहीं।</div><div class="step-desc en" style="display:none">Visit your gas company's website (IGL, MGL, HPCL) and check your pincode. If there's no pipeline in your area, applying won't help.</div></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title hi">ऑनलाइन रजिस्ट्रेशन करें</div><div class="step-title en" style="display:none">Register Online</div><div class="step-desc hi">कंपनी की वेबसाइट पर जाएं → "New Connection" पर क्लिक करें → अपना नाम, पता, मोबाइल नंबर भरें → आधार नंबर दर्ज करें। यह 10 मिनट का काम है।</div><div class="step-desc en" style="display:none">Go to company website → Click "New Connection" → Fill name, address, mobile → Enter Aadhaar number. This takes 10 minutes.</div></div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title hi">दस्तावेज अपलोड करें</div><div class="step-title en" style="display:none">Upload Documents</div><div class="step-desc hi">आधार कार्ड, पता प्रमाण और एक फोटो स्कैन करके अपलोड करें। मकान मालिक है तो प्रॉपर्टी डॉक्यूमेंट भी। किरायेदार है तो रेंट एग्रीमेंट।</div><div class="step-desc en" style="display:none">Upload scanned Aadhaar, address proof and photo. Property document if you own, rent agreement if you're a tenant.</div></div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-title hi">सिक्योरिटी डिपॉजिट और फीस भरें</div><div class="step-title en" style="display:none">Pay Security Deposit and Fees</div><div class="step-desc hi">ऑनलाइन पेमेंट करें — सिक्योरिटी डिपॉजिट ₹5,000–₹8,000 (वापस मिलती है) + कनेक्शन चार्ज ₹3,000–₹5,000 (एक बार)। UPI, Net Banking, Card सब चलता है।</div><div class="step-desc en" style="display:none">Pay online — Security deposit ₹5,000–₹8,000 (refundable) + connection charge ₹3,000–₹5,000 (one-time). UPI, Net Banking, Card all accepted.</div></div></div>
-    <div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-title hi">टेक्नीशियन का इंतजार करें</div><div class="step-title en" style="display:none">Wait for Technician Visit</div><div class="step-desc hi">कंपनी 15-20 दिन के अंदर टेक्नीशियन भेजती है। वो पाइप की जाँच करेगा, मीटर लगाएगा और कनेक्शन चालू करेगा। आप घर पर रहें।</div><div class="step-desc en" style="display:none">Company sends technician within 15-20 days. They check pipe, install meter and activate connection. Make sure to be home.</div></div></div>
-    <div class="step"><div class="step-num">6</div><div class="step-body"><div class="step-title hi">कनेक्शन चालू — पुराना LPG कनेक्शन बंद करें</div><div class="step-title en" style="display:none">Connection Active — Surrender LPG Connection</div><div class="step-desc hi">PNG चालू होने के बाद LPG कनेक्शन सरेंडर करना जरूरी है। इससे सिक्योरिटी डिपॉजिट वापस मिलती है — ₹1,500–₹2,500 अतिरिक्त फायदा।</div><div class="step-desc en" style="display:none">After PNG activation, you must surrender LPG connection. This gets your LPG security deposit back — ₹1,500–₹2,500 extra benefit.</div></div></div>
+    <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">पहले चेक करें — आपके इलाके में PNG है या नहीं</div><div class="step-title en" style="display:none">First Check — Is PNG Available in Your Area?</div><div class="step-desc">अपनी गैस कंपनी की वेबसाइट पर जाएं (IGL, MGL, HPCL) और अपना पिनकोड डालकर चेक करें। अगर आपके इलाके में पाइपलाइन नहीं है, तो अप्लाई करने का कोई फायदा नहीं।</div><div class="step-desc en" style="display:none">Visit your gas company's website (IGL, MGL, HPCL) and check your pincode. If there's no pipeline in your area, applying won't help.</div></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">ऑनलाइन रजिस्ट्रेशन करें</div><div class="step-title en" style="display:none">Register Online</div><div class="step-desc">कंपनी की वेबसाइट पर जाएं → "New Connection" पर क्लिक करें → अपना नाम, पता, मोबाइल नंबर भरें → आधार नंबर दर्ज करें। यह 10 मिनट का काम है।</div><div class="step-desc en" style="display:none">Go to company website → Click "New Connection" → Fill name, address, mobile → Enter Aadhaar number. This takes 10 minutes.</div></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">दस्तावेज अपलोड करें</div><div class="step-title en" style="display:none">Upload Documents</div><div class="step-desc">आधार कार्ड, पता प्रमाण और एक फोटो स्कैन करके अपलोड करें। मकान मालिक है तो प्रॉपर्टी डॉक्यूमेंट भी। किरायेदार है तो रेंट एग्रीमेंट।</div><div class="step-desc en" style="display:none">Upload scanned Aadhaar, address proof and photo. Property document if you own, rent agreement if you're a tenant.</div></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-title">सिक्योरिटी डिपॉजिट और फीस भरें</div><div class="step-title en" style="display:none">Pay Security Deposit and Fees</div><div class="step-desc">ऑनलाइन पेमेंट करें — सिक्योरिटी डिपॉजिट ₹5,000–₹8,000 (वापस मिलती है) + कनेक्शन चार्ज ₹3,000–₹5,000 (एक बार)। UPI, Net Banking, Card सब चलता है।</div><div class="step-desc en" style="display:none">Pay online — Security deposit ₹5,000–₹8,000 (refundable) + connection charge ₹3,000–₹5,000 (one-time). UPI, Net Banking, Card all accepted.</div></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-title">टेक्नीशियन का इंतजार करें</div><div class="step-title en" style="display:none">Wait for Technician Visit</div><div class="step-desc">कंपनी 15-20 दिन के अंदर टेक्नीशियन भेजती है। वो पाइप की जाँच करेगा, मीटर लगाएगा और कनेक्शन चालू करेगा। आप घर पर रहें।</div><div class="step-desc en" style="display:none">Company sends technician within 15-20 days. They check pipe, install meter and activate connection. Make sure to be home.</div></div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-body"><div class="step-title">कनेक्शन चालू — पुराना LPG कनेक्शन बंद करें</div><div class="step-title en" style="display:none">Connection Active — Surrender LPG Connection</div><div class="step-desc">PNG चालू होने के बाद LPG कनेक्शन सरेंडर करना जरूरी है। इससे सिक्योरिटी डिपॉजिट वापस मिलती है — ₹1,500–₹2,500 अतिरिक्त फायदा।</div><div class="step-desc en" style="display:none">After PNG activation, you must surrender LPG connection. This gets your LPG security deposit back — ₹1,500–₹2,500 extra benefit.</div></div></div>
   </div>
 
   <!-- DOCUMENTS -->

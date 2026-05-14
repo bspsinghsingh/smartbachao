@@ -75,6 +75,34 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 .source-link a{color:var(--forest);font-weight:600;text-decoration:none;}
 .source-link a:hover{text-decoration:underline;}
 .source-link span{color:var(--muted);}
+
+/* Info Grid */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin:1.2rem 0;}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;text-align:center;box-shadow:0 2px 8px rgba(26,71,49,0.06);}
+.info-icon{font-size:1.6rem;margin-bottom:6px;}
+.info-title{font-size:0.85rem;font-weight:600;margin-bottom:4px;color:var(--forest);display:block;}
+.info-desc{font-size:0.78rem;color:var(--muted);line-height:1.5;display:block;}
+
+/* Compare Table */
+.compare-table{width:100%;border-collapse:collapse;margin:1.2rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+.compare-table th{background:var(--forest);color:white;padding:11px 14px;text-align:left;font-size:0.85rem;font-weight:600;}
+.compare-table td{padding:10px 14px;border-bottom:1px solid var(--border);font-size:0.85rem;color:var(--ink-mid);vertical-align:top;}
+.compare-table tr:nth-child(even) td{background:var(--warm);}
+.compare-table tr:last-child td{border-bottom:none;}
+
+/* Related Cards */
+.related{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-top:1.5rem;}
+.rel-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.1rem;text-decoration:none;color:var(--ink);transition:all 0.2s;display:block;}
+.rel-card:hover{border-color:var(--forest);box-shadow:0 4px 12px rgba(26,71,49,0.08);transform:translateY(-1px);}
+.rel-icon{font-size:1.4rem;margin-bottom:6px;}
+.rel-title{font-size:0.85rem;font-weight:600;line-height:1.4;color:var(--ink);display:block;}
+
+/* Steps */
+.steps{display:flex;flex-direction:column;gap:0.9rem;margin:1.2rem 0;}
+.step{background:var(--card);border-radius:12px;padding:1.2rem 1.4rem;border:1px solid var(--border);display:flex;gap:1rem;align-items:flex-start;}
+.step-num{background:var(--forest);color:white;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;font-weight:700;flex-shrink:0;}
+.step-title{font-size:0.95rem;font-weight:700;margin-bottom:4px;color:var(--ink);display:block;}
+.step-desc{font-size:0.85rem;color:var(--muted);line-height:1.7;display:block;}
 </style></style>
 <link rel="alternate" hreflang="hi" href="https://smartbachao.com/bijli-bill-kam-kare.html"/>
 <link rel="alternate" hreflang="en" href="https://smartbachao.com/bijli-bill-kam-kare.html"/>
@@ -206,10 +234,10 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 </div>
 </div>
 <div class="related">
-  <a href="png-connection-guide.html" class="rel-card"><div class="rel-icon">🔗</div><div class="rel-title hi">PNG कनेक्शन गाइड</div><div class="rel-title en" style="display:none">PNG Connection Guide</div></a>
-  <a href="pm-surya-ghar-guide.html" class="rel-card"><div class="rel-icon">☀️</div><div class="rel-title hi">PM सूर्य घर योजना</div><div class="rel-title en" style="display:none">PM Surya Ghar Scheme</div></a>
-  <a href="best-induction-cooktop-india.html" class="rel-card"><div class="rel-icon">🍳</div><div class="rel-title hi">बेस्ट इंडक्शन कुकटॉप</div><div class="rel-title en" style="display:none">Best Induction Cooktop</div></a>
-  <a href="mehngai-mein-paise-bachao.html" class="rel-card"><div class="rel-icon">💰</div><div class="rel-title hi">महंगाई में पैसे बचाएं</div><div class="rel-title en" style="display:none">Save Money in Inflation</div></a>
+  <a href="png-connection-guide.html" class="rel-card"><div class="rel-icon">🔗</div><div class="rel-title">PNG कनेक्शन गाइड</div></a>
+  <a href="pm-surya-ghar-guide.html" class="rel-card"><div class="rel-icon">☀️</div><div class="rel-title">PM सूर्य घर योजना</div></a>
+  <a href="best-induction-cooktop-india.html" class="rel-card"><div class="rel-icon">🍳</div><div class="rel-title">बेस्ट इंडक्शन कुकटॉप</div></a>
+  <a href="mehngai-mein-paise-bachao.html" class="rel-card"><div class="rel-icon">💰</div><div class="rel-title">महंगाई में पैसे बचाएं</div></a>
 </div>
 </div>
 
